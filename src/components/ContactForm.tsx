@@ -299,7 +299,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
             <p className="text-sm text-gray-600 text-center">
               <Trans i18nKey="contactForm.footer" components={{ 0: <br /> }} />
               <br />
-              <span className="font-medium">info@discoveryhiddenjapan.com</span>
+              <span className="font-medium">info@dh-japan.com</span>
             </p>
           </div>
         </div>

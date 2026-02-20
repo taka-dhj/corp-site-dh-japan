@@ -5,7 +5,7 @@
 ### 1. Resend アカウントの設定
 1. [Resend](https://resend.com) でアカウントを作成
 2. API キーを取得
-3. ドメインを認証（`discoveryhiddenjapan.com`）
+3. ドメインを認証（`dh-japan.com`）
 
 ### 2. Cloudflare Pages デプロイ
 1. Cloudflare Pages でプロジェクトを作成
@@ -36,7 +36,7 @@ RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxxxxxxxx
 1. ユーザーがフォームに入力
 2. フロントエンドが `/api/send-email` に POST リクエスト
 3. Cloudflare Functions が Resend API を使用してメール送信
-4. `info@discoveryhiddenjapan.com` にメールが届く
+4. `info@dh-japan.com` にメールが届く
 
 ### 必要な設定
 - Resend でドメイン認証
