@@ -398,7 +398,7 @@ export async function onRequest(context) {
     <div class="footer">
       <div class="company-info">
         <strong>Discovery Hidden Japan</strong><br>
-        Email: info@discoveryhiddenjapan.com<br>
+        Email: info@dh-japan.com<br>
         24時間受付
       </div>
     </div>
@@ -417,8 +417,8 @@ export async function onRequest(context) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'noreply@discoveryhiddenjapan.com',
-        to: 'info@discoveryhiddenjapan.com',
+        from: 'noreply@dh-japan.com',
+        to: 'info@dh-japan.com',
         subject: `お問い合わせ: ${escapedSubject}`,
         html: adminEmailBody,
         reply_to: email,
@@ -451,7 +451,7 @@ export async function onRequest(context) {
     const adminEmailData = await adminEmailResponse.json();
     console.log('Admin email sent successfully:', {
       id: adminEmailData.id,
-      to: 'info@discoveryhiddenjapan.com',
+      to: 'info@dh-japan.com',
       subject: escapedSubject
     });
 
@@ -463,7 +463,7 @@ export async function onRequest(context) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'noreply@discoveryhiddenjapan.com',
+        from: 'noreply@dh-japan.com',
         to: email,
         subject: 'お問い合わせを受け付けました - Discovery Hidden Japan',
         html: customerEmailBody,

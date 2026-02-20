@@ -9,7 +9,7 @@ Cloudflare Pages Function (/api/send-email)
     ↓
 Resend API (https://api.resend.com/emails)
     ↓
-Email Delivery (info@discoveryhiddenjapan.com)
+Email Delivery (info@dh-japan.com)
 ```
 
 ## 前提条件
@@ -125,8 +125,8 @@ POST /api/send-email
 Attempting to send email via Resend API...
 Email sent successfully: {
   id: "xxx",
-  from: "noreply@discoveryhiddenjapan.com",
-  to: "info@discoveryhiddenjapan.com",
+  from: "noreply@dh-japan.com",
+  to: "info@dh-japan.com",
   subject: "お問い合わせ: xxx"
 }
 ```
@@ -147,7 +147,7 @@ Resend API error: {
 1. **正常系テスト**
    - すべてのフィールドを入力して送信
    - 成功メッセージが表示されることを確認
-   - `info@discoveryhiddenjapan.com` にメールが届くことを確認
+   - `info@dh-japan.com` にメールが届くことを確認
 
 2. **バリデーションテスト**
    - 必須フィールドを空にして送信 → エラー表示

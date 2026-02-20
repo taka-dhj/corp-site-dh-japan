@@ -1058,10 +1058,10 @@ function App() {
               <div className="text-center">
                 <p className="text-gray-600 mb-2 font-medium">{t('contact.orEmail')}</p>
                 <a 
-                  href={`mailto:info@discoveryhiddenjapan.com?subject=${encodeURIComponent(i18n.language === 'ja' ? 'お問い合わせ' : 'Inquiry')}&body=${encodeURIComponent(i18n.language === 'ja' ? 'お名前:%0D%0A会社名・団体名:%0D%0A電話番号:%0D%0A%0D%0Aお問い合わせ内容:%0D%0A' : 'Name:%0D%0ACompany/Organization:%0D%0APhone Number:%0D%0A%0D%0AInquiry:%0D%0A')}`}
+                  href={`mailto:info@dh-japan.com?subject=${encodeURIComponent(i18n.language === 'ja' ? 'お問い合わせ' : 'Inquiry')}&body=${encodeURIComponent(i18n.language === 'ja' ? 'お名前:%0D%0A会社名・団体名:%0D%0A電話番号:%0D%0A%0D%0Aお問い合わせ内容:%0D%0A' : 'Name:%0D%0ACompany/Organization:%0D%0APhone Number:%0D%0A%0D%0AInquiry:%0D%0A')}`}
                   className="text-rose-600 hover:text-rose-700 font-semibold underline"
                 >
-                  info@discoveryhiddenjapan.com
+                  info@dh-japan.com
                 </a>
               </div>
             </div>
