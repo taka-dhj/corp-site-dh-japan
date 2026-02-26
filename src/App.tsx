@@ -1021,11 +1021,11 @@ function App() {
                   <p className="text-gray-700 leading-relaxed mb-6 font-medium">
                     {t('news.items.beautifulVillages.description')}
                   </p>
-                  <div className="flex items-center justify-center p-4 bg-white rounded-lg border border-gray-200">
+                  <div className="flex items-center justify-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-lg border-2 border-gray-200">
                     <img 
                       src="/beautiful-villages-logo.png" 
                       alt="日本で最も美しい村 連合" 
-                      className="h-16 object-contain"
+                      className="w-full max-w-xs object-contain"
                       onError={(e) => {
                         e.currentTarget.style.display = 'none';
                       }}
