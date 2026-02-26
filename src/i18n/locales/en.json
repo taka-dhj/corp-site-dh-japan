@@ -133,6 +133,28 @@
     "membership": "Membership & Certification",
     "membershipValue": "Full Member of Japan Association of Travel Agents (JATA)"
   },
+  "news": {
+    "title": "News & Announcements",
+    "subtitle": "Latest news and press releases",
+    "readMore": "Read More",
+    "items": {
+      "beautifulVillages": {
+        "date": "April 2026",
+        "title": "Certified Member of 'The Most Beautiful Villages in Japan' Association",
+        "description": "Discovery Hidden Japan has been certified as a member company of 'The Most Beautiful Villages in Japan' Association. We will promote sustainable tourism while preserving regional beauty and culture."
+      }
+    }
+  },
+  "prive": {
+    "cta": {
+      "badge": "Premium Experience",
+      "title": "DHJ Privé",
+      "subtitle": "Premium Tours for Discerning Travelers",
+      "description": "Experience Japan like never before with world-class service and exclusive experiences.",
+      "button": "Visit DHJ Privé",
+      "features": ["Fully Customized", "Private Guides", "Exclusive Experiences"]
+    }
+  },
   "contact": {
     "title": "Contact Us",
     "subtitle": "Together, we create the future of Japan's tourism industry with innovative solutions",

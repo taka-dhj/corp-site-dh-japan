@@ -31,7 +31,9 @@ import {
   Briefcase,
   GraduationCap,
   Quote,
-  ChevronDown
+  ChevronDown,
+  Newspaper,
+  Crown
 } from 'lucide-react';
 
 function App() {
@@ -339,6 +341,23 @@ function App() {
                     {t('nav.executives')}
                   </a>
                   <a
+                    href="#news"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-rose-600 transition-colors duration-200"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const element = document.getElementById('news');
+                      if (element) {
+                        const offsetTop = element.offsetTop - 120;
+                        window.scrollTo({
+                          top: offsetTop,
+                          behavior: 'smooth'
+                        });
+                      }
+                    }}
+                  >
+                    News
+                  </a>
+                  <a
                     href="#company-info"
                     className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-rose-600 transition-colors duration-200"
                     onClick={(e) => {
@@ -486,6 +505,24 @@ function App() {
                 className="font-light transition-colors duration-300 hover:text-rose-600 text-gray-700"
               >
                 {t('nav.executives')}
+              </a>
+              <a
+                href="#news"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMobileMenuOpen(false);
+                  const element = document.getElementById('news');
+                  if (element) {
+                    const offsetTop = element.offsetTop - 120;
+                    window.scrollTo({
+                      top: offsetTop,
+                      behavior: 'smooth'
+                    });
+                  }
+                }}
+                className="font-light transition-colors duration-300 hover:text-rose-600 text-gray-700"
+              >
+                News
               </a>
               <a
                 href="#company-info"
@@ -936,6 +973,129 @@ function App() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* News Section */}
+      <section
+        id="news"
+        data-animate
+        className={`py-32 bg-white transition-all duration-1000 ${
+          visibleSections.has('news')
+            ? 'opacity-100 translate-y-0'
+            : 'opacity-0 translate-y-20'
+        }`}
+      >
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-normal text-gray-900 mb-8 tracking-tight">
+              {t('news.title')}
+            </h2>
+            <div className="w-24 h-px bg-rose-600 mx-auto mb-12"></div>
+            <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-medium">
+              {t('news.subtitle')}
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            {/* Beautiful Villages News Item */}
+            <div className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+              <div className="flex flex-col md:flex-row">
+                <div className="md:w-1/3 bg-gradient-to-br from-rose-600 to-rose-700 p-8 flex items-center justify-center">
+                  <div className="text-center">
+                    <Award className="w-20 h-20 text-white mx-auto mb-4" />
+                    <div className="text-white text-sm font-medium tracking-wider uppercase mb-2">
+                      {t('news.items.beautifulVillages.date')}
+                    </div>
+                  </div>
+                </div>
+                <div className="md:w-2/3 p-8">
+                  <div className="flex items-center gap-2 mb-4">
+                    <Newspaper className="w-5 h-5 text-rose-600" />
+                    <span className="text-sm text-rose-600 font-semibold uppercase tracking-wider">Press Release</span>
+                  </div>
+                  <h3 className="text-2xl font-normal text-gray-900 mb-4 leading-tight">
+                    {t('news.items.beautifulVillages.title')}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed mb-6 font-medium">
+                    {t('news.items.beautifulVillages.description')}
+                  </p>
+                  <div className="flex items-center justify-center p-4 bg-white rounded-lg border border-gray-200">
+                    <img 
+                      src="/beautiful-villages-logo.png" 
+                      alt="日本で最も美しい村 連合" 
+                      className="h-16 object-contain"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* DHJ Privé CTA Section */}
+      <section
+        id="prive-cta"
+        data-animate
+        className={`py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white relative overflow-hidden transition-all duration-1000 ${
+          visibleSections.has('prive-cta')
+            ? 'opacity-100 translate-y-0'
+            : 'opacity-0 translate-y-20'
+        }`}
+      >
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+            backgroundSize: '40px 40px'
+          }}></div>
+        </div>
+
+        <div className="max-w-6xl mx-auto px-4 relative z-10">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-rose-600/20 border border-rose-600/30 px-4 py-2 rounded-full mb-8">
+              <Crown className="w-5 h-5 text-rose-400" />
+              <span className="text-rose-300 text-sm font-medium tracking-wider uppercase">
+                {t('prive.cta.badge')}
+              </span>
+            </div>
+            <h2 className="text-5xl md:text-7xl font-normal mb-6 tracking-tight">
+              {t('prive.cta.title')}
+            </h2>
+            <div className="w-24 h-px bg-rose-600 mx-auto mb-8"></div>
+            <p className="text-3xl text-gray-300 mb-4 font-light">
+              {t('prive.cta.subtitle')}
+            </p>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-medium">
+              {t('prive.cta.description')}
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-6 mb-12">
+            {(t('prive.cta.features', { returnObjects: true }) as string[]).map((feature, index) => (
+              <div key={index} className="flex items-center gap-2 bg-white/5 backdrop-blur-sm px-6 py-3 rounded-full border border-white/10">
+                <CheckCircle className="w-5 h-5 text-rose-400" />
+                <span className="text-gray-300 font-medium">{feature}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <a
+              href="https://prive.dh-japan.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-rose-600 to-rose-700 hover:from-rose-700 hover:to-rose-800 text-white px-12 py-6 rounded-lg transition-all duration-500 transform hover:-translate-y-1 hover:shadow-2xl group text-lg font-medium"
+            >
+              <Crown className="w-6 h-6" />
+              {t('prive.cta.button')}
+              <ExternalLink className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            </a>
           </div>
         </div>
       </section>

@@ -133,6 +133,28 @@
     "membership": "加盟・認可団体",
     "membershipValue": "一般社団法人 日本旅行業協会(JATA)"
   },
+  "news": {
+    "title": "お知らせ",
+    "subtitle": "最新のニュースとプレスリリース",
+    "readMore": "詳しく見る",
+    "items": {
+      "beautifulVillages": {
+        "date": "2026年4月",
+        "title": "「日本で最も美しい村」連合 加盟企業認定",
+        "description": "Discovery Hidden Japanは、「日本で最も美しい村」連合の加盟企業として認定されました。地域の美しさと文化を守りながら、持続可能な観光を推進してまいります。"
+      }
+    }
+  },
+  "prive": {
+    "cta": {
+      "badge": "Premium Experience",
+      "title": "DHJ Privé",
+      "subtitle": "富裕層向けプレミアムツアー",
+      "description": "一流の体験と最高のおもてなしで、唯一無二の日本旅行を。",
+      "button": "DHJ Privéへ",
+      "features": ["完全カスタマイズ", "プライベートガイド", "厳選された体験"]
+    }
+  },
   "contact": {
     "title": "お問い合わせ",
     "subtitle": "革新的なソリューションで、日本の観光業界の未来を共に創造します",
