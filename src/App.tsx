@@ -836,6 +836,36 @@ function App() {
                         </div>
                       ))}
                     </div>
+
+                    {/* DHJ Privé CTA for Custom Travel Service */}
+                    {index === 3 && (
+                      <div className="mt-8 p-6 bg-gradient-to-r from-gray-900 to-gray-800 rounded-lg border-2 border-rose-600/20">
+                        <div className="flex items-center gap-3 mb-3">
+                          <Crown className="w-6 h-6 text-rose-400" />
+                          <span className="text-rose-400 text-sm font-semibold uppercase tracking-wider">Premium Experience</span>
+                        </div>
+                        <h4 className="text-2xl font-normal text-white mb-2">
+                          DHJ Privé
+                        </h4>
+                        <p className="text-gray-300 mb-4 leading-relaxed">
+                          {i18n.language === 'ja' 
+                            ? '富裕層向けのプレミアムツアーはDHJ Privéで。一流の体験と最高のおもてなしをご提供します。'
+                            : 'Premium tours for discerning travelers. Experience world-class service and exclusive journeys.'}
+                        </p>
+                        <a
+                          href="https://prive.dh-japan.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-lg transition-all duration-300 transform hover:-translate-y-1 group"
+                        >
+                          <Crown className="w-5 h-5" />
+                          <span className="font-medium">
+                            {i18n.language === 'ja' ? 'DHJ Privéへ' : 'Visit DHJ Privé'}
+                          </span>
+                          <ExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
