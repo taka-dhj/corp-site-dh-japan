@@ -22,6 +22,30 @@
       "forTravelers": "For Travelers"
     }
   },
+  "solutions": {
+    "title": "Our Integrated Solutions",
+    "subtitle": "Four specialized domains working together to solve tourism industry challenges",
+    "inbound": {
+      "title": "Inbound Tour Planning",
+      "description": "Tailor-made luxury travel planning and arrangement for affluent travelers. Delivering exceptional Japanese experiences with world-class hospitality.",
+      "cta": "Learn More"
+    },
+    "consulting": {
+      "title": "Regional Consulting",
+      "description": "Strategic planning and implementation support for regional tourism. Building sustainable destinations through data-driven approaches.",
+      "cta": "Contact Us"
+    },
+    "dx": {
+      "title": "Tourism DX Solutions",
+      "description": "Business efficiency through generative AI and data utilization. Dramatically improving tourism business productivity with cutting-edge technology.",
+      "cta": "Contact Us"
+    },
+    "property": {
+      "title": "Property Management",
+      "description": "Activation and high-yield operation of idle real estate. Transforming vacant properties into revenue-generating assets and revitalizing communities.",
+      "cta": "Contact Us"
+    }
+  },
   "philosophy": {
     "title": "Our Philosophy",
     "heading": "Connecting hearts and land,<0/> <1>weaving stories through time</1>",

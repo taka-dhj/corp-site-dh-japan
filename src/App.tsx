@@ -33,7 +33,8 @@ import {
   Quote,
   ChevronDown,
   Newspaper,
-  Crown
+  Crown,
+  Key
 } from 'lucide-react';
 
 function App() {
@@ -664,6 +665,175 @@ function App() {
               <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
             </div>
             <p className="text-white/60 text-xs tracking-widest">{t('common.scroll')}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Integrated Solutions Section */}
+      <section 
+        id="solutions"
+        data-animate
+        className={`py-24 md:py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-black relative transition-all duration-1000 ${
+          visibleSections.has('solutions') 
+            ? 'opacity-100 translate-y-0' 
+            : 'opacity-0 translate-y-20'
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <div className="w-24 h-px bg-rose-600 mx-auto mb-8"></div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              {t('solutions.title')}
+            </h2>
+            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+              {t('solutions.subtitle')}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            {/* Inbound Tour Planning */}
+            <div 
+              className="group rounded-xl bg-white/5 backdrop-blur-sm p-8 hover:bg-white/10 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-white/10 hover:border-rose-500/50"
+            >
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-rose-500 to-pink-600 flex items-center justify-center">
+                    <Globe className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-rose-400 transition-colors">
+                    {t('solutions.inbound.title')}
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed mb-6">
+                    {t('solutions.inbound.description')}
+                  </p>
+                  <a
+                    href="https://prive.dh-japan.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-rose-400 hover:text-rose-300 font-medium transition-colors"
+                  >
+                    {t('solutions.inbound.cta')}
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Regional Consulting */}
+            <div 
+              className="group rounded-xl bg-white/5 backdrop-blur-sm p-8 hover:bg-white/10 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-white/10 hover:border-blue-500/50"
+            >
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center">
+                    <Building2 className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                    {t('solutions.consulting.title')}
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed mb-6">
+                    {t('solutions.consulting.description')}
+                  </p>
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const element = document.getElementById('contact');
+                      if (element) {
+                        const offsetTop = element.offsetTop - 120;
+                        window.scrollTo({
+                          top: offsetTop,
+                          behavior: 'smooth'
+                        });
+                      }
+                    }}
+                    className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium transition-colors"
+                  >
+                    {t('solutions.consulting.cta')}
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Tourism DX Solutions */}
+            <div 
+              className="group rounded-xl bg-white/5 backdrop-blur-sm p-8 hover:bg-white/10 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-white/10 hover:border-purple-500/50"
+            >
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-purple-500 to-violet-600 flex items-center justify-center">
+                    <Brain className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                    {t('solutions.dx.title')}
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed mb-6">
+                    {t('solutions.dx.description')}
+                  </p>
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const element = document.getElementById('contact');
+                      if (element) {
+                        const offsetTop = element.offsetTop - 120;
+                        window.scrollTo({
+                          top: offsetTop,
+                          behavior: 'smooth'
+                        });
+                      }
+                    }}
+                    className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors"
+                  >
+                    {t('solutions.dx.cta')}
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Property Management */}
+            <div 
+              className="group rounded-xl bg-white/5 backdrop-blur-sm p-8 hover:bg-white/10 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-white/10 hover:border-green-500/50"
+            >
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
+                    <Key className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors">
+                    {t('solutions.property.title')}
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed mb-6">
+                    {t('solutions.property.description')}
+                  </p>
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const element = document.getElementById('contact');
+                      if (element) {
+                        const offsetTop = element.offsetTop - 120;
+                        window.scrollTo({
+                          top: offsetTop,
+                          behavior: 'smooth'
+                        });
+                      }
+                    }}
+                    className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 font-medium transition-colors"
+                  >
+                    {t('solutions.property.cta')}
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
