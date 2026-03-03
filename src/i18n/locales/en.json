@@ -12,10 +12,15 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Connecting authentic Japan <0/>with the world,<0/> <1>creating unforgettable journeys</1>",
-    "subtitle": "We weave regional stories and propose<0/> new value for the future of tourism",
+    "title": "Maximizing Japan's Tourism Potential<0/> with Global Standards",
+    "subtitle": "Inbound Tourism, Regional Consulting, DX, and Property Management. A comprehensive solution provider bridging local gems to the world.",
     "serviceDetails": "Service Details",
-    "contact": "Contact"
+    "contact": "Contact",
+    "cta": {
+      "forBusiness": "For Local Gov & Business",
+      "forPartners": "For Overseas Partners",
+      "forTravelers": "For Travelers"
+    }
   },
   "philosophy": {
     "title": "Our Philosophy",
