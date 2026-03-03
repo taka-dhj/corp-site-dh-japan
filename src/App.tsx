@@ -47,6 +47,7 @@ function App() {
   const [isContactFormOpen, setIsContactFormOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
+  const [isSolutionsDropdownOpen, setIsSolutionsDropdownOpen] = useState(false);
 
   // URLから言語を検出してi18nを同期
   useEffect(() => {
@@ -252,10 +253,17 @@ function App() {
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-8">
-              <a
-                href="#philosophy"
+            <nav className="hidden md:flex items-center gap-6">
+              {/* Home */}
+              <button
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 className="font-light transition-colors duration-300 hover:text-rose-600 text-gray-700"
+              >
+                {t('nav.home')}
+              </button>
+
+              {/* About DHJ */}
+              <button
                 onClick={(e) => {
                   e.preventDefault();
                   const element = document.getElementById('philosophy');
@@ -267,139 +275,178 @@ function App() {
                     });
                   }
                 }}
-              >
-                {t('nav.philosophy')}
-              </a>
-              <a 
-                href="#services-header" 
                 className="font-light transition-colors duration-300 hover:text-rose-600 text-gray-700"
-               onClick={(e) => {
-                 e.preventDefault();
-                 setIsMobileMenuOpen(false);
-                 setIsMobileMenuOpen(false);
-                 setIsMobileMenuOpen(false);
-                 setIsMobileMenuOpen(false);
-                 const element = document.getElementById('services-header');
-                 if (element) {
-                   const offsetTop = element.offsetTop - 120;
-                   window.scrollTo({
-                     top: offsetTop,
-                     behavior: 'smooth'
-                   });
-                 }
-               }}
               >
-                {t('nav.services')}
-              </a>
+                {t('nav.aboutDHJ')}
+              </button>
+
+              {/* Solutions Dropdown */}
               <div 
                 className="relative"
-                onMouseEnter={() => setIsAboutDropdownOpen(true)}
-                onMouseLeave={() => setIsAboutDropdownOpen(false)}
+                onMouseEnter={() => setIsSolutionsDropdownOpen(true)}
+                onMouseLeave={() => setIsSolutionsDropdownOpen(false)}
               >
                 <button 
                   className="font-light transition-colors duration-300 hover:text-rose-600 flex items-center gap-1 text-gray-700"
                 >
-                  {t('nav.about')}
+                  {t('nav.solutions')}
                   <ChevronDown className="w-4 h-4" />
                 </button>
                 
-                {/* Dropdown Menu */}
-                <div className={`absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 transition-all duration-300 ${
-                  isAboutDropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+                {/* Solutions Dropdown Menu */}
+                <div className={`absolute top-full left-0 mt-2 w-72 bg-white shadow-xl rounded-lg py-3 transition-all duration-300 ${
+                  isSolutionsDropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
                 }`}>
-                  <a 
-                    href="#strengths" 
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-rose-600 transition-colors duration-200"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      const element = document.getElementById('strengths');
-                      if (element) {
-                        const offsetTop = element.offsetTop - 120;
-                        window.scrollTo({
-                          top: offsetTop,
-                          behavior: 'smooth'
-                        });
-                      }
-                    }}
-                  >
-                    {t('nav.strength')}
-                  </a>
-                  <a 
-                    href="#executives-header" 
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-rose-600 transition-colors duration-200"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      const element = document.getElementById('executives-header');
-                      if (element) {
-                        const offsetTop = element.offsetTop - 120;
-                        window.scrollTo({
-                          top: offsetTop,
-                          behavior: 'smooth'
-                        });
-                      }
-                    }}
-                  >
-                    {t('nav.executives')}
-                  </a>
-                  <a
-                    href="#news"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-rose-600 transition-colors duration-200"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      const element = document.getElementById('news');
-                      if (element) {
-                        const offsetTop = element.offsetTop - 120;
-                        window.scrollTo({
-                          top: offsetTop,
-                          behavior: 'smooth'
-                        });
-                      }
-                    }}
-                  >
-                    News
-                  </a>
-                  <a
-                    href="#company-info"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-rose-600 transition-colors duration-200"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      const element = document.getElementById('company-info');
-                      if (element) {
-                        const offsetTop = element.offsetTop - 120;
-                        window.scrollTo({
-                          top: offsetTop,
-                          behavior: 'smooth'
-                        });
-                      }
-                    }}
-                  >
-                    Profile
-                  </a>
-                  <a 
-                    href="#contact" 
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-rose-600 transition-colors duration-200"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      const element = document.getElementById('contact');
-                      if (element) {
-                        const offsetTop = element.offsetTop - 120;
-                        window.scrollTo({
-                          top: offsetTop,
-                          behavior: 'smooth'
-                        });
-                      }
-                    }}
-                  >
-                    Contact
-                  </a>
+                  {/* For Government & Business */}
+                  <div className="px-4 py-2">
+                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                      {t('nav.solutionsDropdown.forBusiness')}
+                    </p>
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const element = document.getElementById('solutions');
+                        if (element) {
+                          const offsetTop = element.offsetTop - 120;
+                          window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                          });
+                        }
+                        setIsSolutionsDropdownOpen(false);
+                      }}
+                      className="block w-full text-left px-2 py-2 text-gray-700 hover:bg-gray-50 hover:text-rose-600 transition-colors duration-200 rounded"
+                    >
+                      {t('nav.solutionsDropdown.consulting')}
+                    </button>
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const element = document.getElementById('solutions');
+                        if (element) {
+                          const offsetTop = element.offsetTop - 120;
+                          window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                          });
+                        }
+                        setIsSolutionsDropdownOpen(false);
+                      }}
+                      className="block w-full text-left px-2 py-2 text-gray-700 hover:bg-gray-50 hover:text-rose-600 transition-colors duration-200 rounded"
+                    >
+                      {t('nav.solutionsDropdown.dx')}
+                    </button>
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const element = document.getElementById('solutions');
+                        if (element) {
+                          const offsetTop = element.offsetTop - 120;
+                          window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                          });
+                        }
+                        setIsSolutionsDropdownOpen(false);
+                      }}
+                      className="block w-full text-left px-2 py-2 text-gray-700 hover:bg-gray-50 hover:text-rose-600 transition-colors duration-200 rounded"
+                    >
+                      {t('nav.solutionsDropdown.property')}
+                    </button>
+                  </div>
+
+                  {/* Divider */}
+                  <div className="border-t border-gray-200 my-2"></div>
+
+                  {/* For Partners & Travelers */}
+                  <div className="px-4 py-2">
+                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                      {t('nav.solutionsDropdown.forPartners')}
+                    </p>
+                    <a
+                      href="mailto:info@dh-japan.com"
+                      className="block px-2 py-2 text-gray-700 hover:bg-gray-50 hover:text-rose-600 transition-colors duration-200 rounded flex items-center justify-between"
+                      onClick={() => setIsSolutionsDropdownOpen(false)}
+                    >
+                      <span>{t('nav.solutionsDropdown.partners')}</span>
+                      <Mail className="w-4 h-4 opacity-60" />
+                    </a>
+                    <a
+                      href="https://prive.dh-japan.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block px-2 py-2 text-gray-700 hover:bg-gray-50 hover:text-rose-600 transition-colors duration-200 rounded flex items-center justify-between"
+                      onClick={() => setIsSolutionsDropdownOpen(false)}
+                    >
+                      <span>{t('nav.solutionsDropdown.travelers')}</span>
+                      <ExternalLink className="w-4 h-4 opacity-60" />
+                    </a>
+                  </div>
                 </div>
               </div>
+
+              {/* Results */}
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.getElementById('overview');
+                  if (element) {
+                    const offsetTop = element.offsetTop - 120;
+                    window.scrollTo({
+                      top: offsetTop,
+                      behavior: 'smooth'
+                    });
+                  }
+                }}
+                className="font-light transition-colors duration-300 hover:text-rose-600 text-gray-700"
+              >
+                {t('nav.results')}
+              </button>
+
+              {/* Team */}
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.getElementById('executives-header');
+                  if (element) {
+                    const offsetTop = element.offsetTop - 120;
+                    window.scrollTo({
+                      top: offsetTop,
+                      behavior: 'smooth'
+                    });
+                  }
+                }}
+                className="font-light transition-colors duration-300 hover:text-rose-600 text-gray-700"
+              >
+                {t('nav.team')}
+              </button>
+
+              {/* News */}
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.getElementById('news');
+                  if (element) {
+                    const offsetTop = element.offsetTop - 120;
+                    window.scrollTo({
+                      top: offsetTop,
+                      behavior: 'smooth'
+                    });
+                  }
+                }}
+                className="font-light transition-colors duration-300 hover:text-rose-600 text-gray-700"
+              >
+                {t('nav.news')}
+              </button>
+
+              {/* Contact Button */}
               <button 
                 onClick={() => setIsContactFormOpen(true)}
                 className="px-6 py-2 border-2 border-rose-600 text-rose-600 hover:bg-rose-600 hover:text-white transition-all duration-300 font-light"
               >
                 {t('nav.contact')}
               </button>
+
               {/* Language Toggle Button */}
               <button
                 onClick={toggleLanguage}

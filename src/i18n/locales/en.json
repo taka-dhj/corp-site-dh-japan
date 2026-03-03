@@ -4,12 +4,27 @@
     "scroll": "SCROLL"
   },
   "nav": {
+    "home": "Home",
+    "aboutDHJ": "About DHJ",
+    "solutions": "Solutions",
+    "results": "Results",
+    "team": "Team",
+    "news": "News",
+    "contact": "Contact",
+    "solutionsDropdown": {
+      "forBusiness": "For Government & Business",
+      "consulting": "Regional Consulting",
+      "dx": "Tourism DX Solutions",
+      "property": "Property Management",
+      "forPartners": "For Partners & Travelers",
+      "partners": "Overseas Partners (DMC)",
+      "travelers": "Premium Private Tours"
+    },
     "philosophy": "Philosophy",
     "services": "Services",
     "about": "About",
     "strength": "Strength",
-    "executives": "Executives",
-    "contact": "Contact"
+    "executives": "Executives"
   },
   "hero": {
     "title": "Maximizing Japan's Tourism Potential<0/> with Global Standards",
