@@ -57,6 +57,22 @@
     "title": "Business Overview",
     "description": "With a focus on <0>alleviating overtourism</0> and <1>regional revitalization</1>,<2/> we create a sustainable future for tourism"
   },
+  "whyDHJ": {
+    "title": "Why Choose DHJ?",
+    "subtitle": "Comprehensive solutions for complex challenges in the tourism industry",
+    "reason1": {
+      "title": "Cross-Industry Integrated Support",
+      "description": "Integrating inbound tourism, regional partnerships, DX, and facility operations. Our strength lies in addressing complex challenges that single-service providers cannot solve."
+    },
+    "reason2": {
+      "title": "Data-Driven Strategic Planning",
+      "description": "Applying global enterprise expertise and AI technology to local contexts. Delivering tangible results through scientific approaches."
+    },
+    "reason3": {
+      "title": "Global × Local Network",
+      "description": "Access to affluent overseas markets and partnerships with 50+ local governments. Functioning as a bridge connecting both worlds."
+    }
+  },
   "achievements": {
     "customerSatisfaction": {
       "label": "Customer Satisfaction",
@@ -160,7 +176,17 @@
     "registration": "Registration",
     "registrationValue": "Travel Agency registered with Tokyo Metropolitan Government, Registration No. 2-8865",
     "membership": "Membership & Certification",
-    "membershipValue": "Full Member of Japan Association of Travel Agents (JATA)"
+    "membershipValue": "Full Member of Japan Association of Travel Agents (JATA)",
+    "financial": "Financial Foundation",
+    "financialValue": "Capital: ¥9,200,000 / Total Funding Secured: ¥25,000,000 (Backed by JFC & Financial Institutions)"
+  },
+  "team": {
+    "title": "Fusing Global Expertise with Local Execution",
+    "description": "Team members from Meta, Microsoft, Google, JTB and more apply global insights to solve regional challenges.",
+    "cebu": {
+      "title": "Global Operations Center (Philippines)",
+      "description": "Enabling 24/7 support and international market understanding"
+    }
   },
   "news": {
     "title": "News & Announcements",

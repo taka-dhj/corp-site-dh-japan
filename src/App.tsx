@@ -930,6 +930,76 @@ function App() {
         </div>
       </section>
 
+      {/* Why DHJ? Section */}
+      <section 
+        id="why-dhj"
+        data-animate
+        className={`py-24 md:py-32 bg-white relative transition-all duration-1000 ${
+          visibleSections.has('why-dhj') 
+            ? 'opacity-100 translate-y-0' 
+            : 'opacity-0 translate-y-20'
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <div className="w-24 h-px bg-rose-600 mx-auto mb-8"></div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              {t('whyDHJ.title')}
+            </h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+              {t('whyDHJ.subtitle')}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Reason 1 */}
+            <div className="group bg-gray-50 rounded-xl p-8 hover:bg-rose-50 hover:shadow-xl transition-all duration-300">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-16 h-16 rounded-full bg-rose-100 flex items-center justify-center mb-6 group-hover:bg-rose-200 transition-colors">
+                  <Target className="w-8 h-8 text-rose-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  {t('whyDHJ.reason1.title')}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {t('whyDHJ.reason1.description')}
+                </p>
+              </div>
+            </div>
+
+            {/* Reason 2 */}
+            <div className="group bg-gray-50 rounded-xl p-8 hover:bg-blue-50 hover:shadow-xl transition-all duration-300">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-6 group-hover:bg-blue-200 transition-colors">
+                  <TrendingUp className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  {t('whyDHJ.reason2.title')}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {t('whyDHJ.reason2.description')}
+                </p>
+              </div>
+            </div>
+
+            {/* Reason 3 */}
+            <div className="group bg-gray-50 rounded-xl p-8 hover:bg-green-50 hover:shadow-xl transition-all duration-300">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-6 group-hover:bg-green-200 transition-colors">
+                  <Globe className="w-8 h-8 text-green-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  {t('whyDHJ.reason3.title')}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {t('whyDHJ.reason3.description')}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4">
@@ -1376,7 +1446,7 @@ function App() {
                       {t('companyInfo.registrationValue')}
                     </td>
                   </tr>
-                  <tr>
+                  <tr className="border-b border-gray-200">
                     <td className="px-8 py-6 bg-gray-50 font-semibold text-gray-900">
                       {t('companyInfo.membership')}
                     </td>
@@ -1384,8 +1454,46 @@ function App() {
                       {t('companyInfo.membershipValue')}
                     </td>
                   </tr>
+                  <tr>
+                    <td className="px-8 py-6 bg-gray-50 font-semibold text-gray-900">
+                      {t('companyInfo.financial')}
+                    </td>
+                    <td className="px-8 py-6 text-gray-700 font-medium">
+                      {t('companyInfo.financialValue')}
+                    </td>
+                  </tr>
                 </tbody>
               </table>
+            </div>
+
+            {/* Team Section */}
+            <div className="mt-16 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8 md:p-12">
+              <div className="text-center mb-8">
+                <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  {t('team.title')}
+                </h3>
+                <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                  {t('team.description')}
+                </p>
+              </div>
+              
+              <div className="mt-8 bg-white/80 backdrop-blur-sm rounded-lg p-6 border border-blue-200">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
+                      <Globe className="w-6 h-6 text-white" />
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-2">
+                      {t('team.cebu.title')}
+                    </h4>
+                    <p className="text-gray-700">
+                      {t('team.cebu.description')}
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
