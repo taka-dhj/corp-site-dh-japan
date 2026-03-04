@@ -66,6 +66,21 @@
     animation: zoom-in 5s ease-out forwards;
   }
 
+  /* Horizontal scroll styles */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Smooth horizontal scroll */
+  .overflow-x-auto {
+    scroll-behavior: smooth;
+  }
+
   /* モバイル用レスポンシブ調整 */
   /* 1. line-height の強制指定 */
   @media (max-width: 768px) {
