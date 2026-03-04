@@ -678,11 +678,15 @@ function App() {
         </div>
       </section>
 
-      {/* 4 Business Domains Section */}
+{/* ========================================
+   BUSINESS DOMAINS - PHOTO FIRST DESIGN
+   Large photos with text overlay, Privé-inspired
+   ======================================== */}
+
       <section 
         id="domains"
         data-animate
-        className={`py-32 md:py-40 bg-white relative transition-all duration-1000 ${
+        className={`py-24 md:py-32 bg-white relative transition-all duration-1000 ${
           visibleSections.has('domains') 
             ? 'opacity-100 translate-y-0' 
             : 'opacity-0 translate-y-20'
@@ -692,111 +696,95 @@ function App() {
           {/* Section Header */}
           <div className="text-center mb-20">
             <div className="w-24 h-px bg-rose-600 mx-auto mb-8"></div>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 mb-6 leading-tight tracking-tight">
               {t('domains.title')}
             </h2>
-            <p className="text-2xl md:text-3xl font-semibold text-gray-700 mb-4">
+            <p className="text-xl md:text-2xl text-gray-600 mb-4">
               {t('domains.subtitle')}
             </p>
           </div>
 
-          {/* 4 Domain Cards - 2x2 Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12 mb-16">
-            {/* Domain 1: Inbound Tours / DMC */}
-            <div className="group relative rounded-3xl p-12 lg:p-14 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-3 border border-gray-100 hover:border-rose-300 overflow-hidden">
-              <div 
-                className="absolute inset-0 bg-cover bg-center opacity-15 group-hover:opacity-25 transition-opacity"
-                style={{ backgroundImage: "url('https://images.pexels.com/photos/1320684/pexels-photo-1320684.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop')" }}
-              ></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-white/95 to-gray-50/95"></div>
-              <div className="relative z-10">
-                <div className="flex items-start justify-between mb-6">
-                  <div className="w-20 h-20 bg-gradient-to-br from-rose-500 to-rose-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg">
-                    <Globe className="w-10 h-10 text-white" />
-                  </div>
-                  <span className="px-4 py-2 bg-rose-100 text-rose-700 text-sm font-semibold rounded-full">
-                    {t('domains.items.inbound.tag')}
-                  </span>
-                </div>
-                <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 group-hover:text-rose-600 transition-colors">
+          {/* Domain Grid - 2x2 with large photos */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            {/* Domain 1: Inbound Tours - Full photo with text overlay */}
+            <div className="group relative h-[500px] overflow-hidden rounded-2xl">
+              <img 
+                src="https://images.pexels.com/photos/2614818/pexels-photo-2614818.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop" 
+                alt="Inbound Tours"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12 text-white">
+                <span className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-semibold rounded-full mb-4">
+                  {t('domains.items.inbound.tag')}
+                </span>
+                <h3 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
                   {t('domains.items.inbound.title')}
                 </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-white/90 leading-relaxed">
                   {t('domains.items.inbound.description')}
                 </p>
               </div>
             </div>
 
             {/* Domain 2: Regional Consulting */}
-            <div className="group relative rounded-3xl p-12 lg:p-14 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-3 border border-gray-100 hover:border-blue-300 overflow-hidden">
-              <div 
-                className="absolute inset-0 bg-cover bg-center opacity-15 group-hover:opacity-25 transition-opacity"
-                style={{ backgroundImage: "url('https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop')" }}
-              ></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-white/95 to-gray-50/95"></div>
-              <div className="relative z-10">
-                <div className="flex items-start justify-between mb-6">
-                  <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg">
-                    <Building2 className="w-10 h-10 text-white" />
-                  </div>
-                  <span className="px-4 py-2 bg-blue-100 text-blue-700 text-sm font-semibold rounded-full">
-                    {t('domains.items.consulting.tag')}
-                  </span>
-                </div>
-                <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+            <div className="group relative h-[500px] overflow-hidden rounded-2xl">
+              <img 
+                src="https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop" 
+                alt="Regional Consulting"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12 text-white">
+                <span className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-semibold rounded-full mb-4">
+                  {t('domains.items.consulting.tag')}
+                </span>
+                <h3 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
                   {t('domains.items.consulting.title')}
                 </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-white/90 leading-relaxed">
                   {t('domains.items.consulting.description')}
                 </p>
               </div>
             </div>
 
             {/* Domain 3: Tourism DX */}
-            <div className="group relative rounded-3xl p-12 lg:p-14 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-3 border border-gray-100 hover:border-purple-300 overflow-hidden">
-              <div 
-                className="absolute inset-0 bg-cover bg-center opacity-15 group-hover:opacity-25 transition-opacity"
-                style={{ backgroundImage: "url('https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop')" }}
-              ></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-white/95 to-gray-50/95"></div>
-              <div className="relative z-10">
-                <div className="flex items-start justify-between mb-6">
-                  <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg">
-                    <Brain className="w-10 h-10 text-white" />
-                  </div>
-                  <span className="px-4 py-2 bg-purple-100 text-purple-700 text-sm font-semibold rounded-full">
-                    {t('domains.items.dx.tag')}
-                  </span>
-                </div>
-                <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">
+            <div className="group relative h-[500px] overflow-hidden rounded-2xl">
+              <img 
+                src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop" 
+                alt="Tourism DX"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12 text-white">
+                <span className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-semibold rounded-full mb-4">
+                  {t('domains.items.dx.tag')}
+                </span>
+                <h3 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
                   {t('domains.items.dx.title')}
                 </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-white/90 leading-relaxed">
                   {t('domains.items.dx.description')}
                 </p>
               </div>
             </div>
 
             {/* Domain 4: Property Management */}
-            <div className="group relative rounded-3xl p-12 lg:p-14 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-3 border border-gray-100 hover:border-green-300 overflow-hidden">
-              <div 
-                className="absolute inset-0 bg-cover bg-center opacity-15 group-hover:opacity-25 transition-opacity"
-                style={{ backgroundImage: "url('https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop')" }}
-              ></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-white/95 to-gray-50/95"></div>
-              <div className="relative z-10">
-                <div className="flex items-start justify-between mb-6">
-                  <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg">
-                    <Home className="w-10 h-10 text-white" />
-                  </div>
-                  <span className="px-4 py-2 bg-green-100 text-green-700 text-sm font-semibold rounded-full">
-                    {t('domains.items.property.tag')}
-                  </span>
-                </div>
-                <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 group-hover:text-green-600 transition-colors">
+            <div className="group relative h-[500px] overflow-hidden rounded-2xl">
+              <img 
+                src="https://images.pexels.com/photos/1440476/pexels-photo-1440476.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop" 
+                alt="Property Management"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12 text-white">
+                <span className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-semibold rounded-full mb-4">
+                  {t('domains.items.property.tag')}
+                </span>
+                <h3 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
                   {t('domains.items.property.title')}
                 </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-white/90 leading-relaxed">
                   {t('domains.items.property.description')}
                 </p>
               </div>
@@ -804,344 +792,267 @@ function App() {
           </div>
 
           {/* Tagline */}
-          <div className="text-center mt-16">
-            <p className="text-3xl md:text-4xl font-bold text-gray-900 tracking-wider">
+          <div className="text-center mt-20">
+            <p className="text-3xl md:text-4xl font-light text-gray-900 tracking-wide">
               {t('domains.tagline')}
             </p>
           </div>
         </div>
       </section>
 
-      {/* Positioning & Solutions Section - Circular Flow */}
 {/* ========================================
-   NEW HORIZONTAL 5-PHASE FLOW DIAGRAM
-   Full-width, left-to-right layout with photos
+   5-PHASE FLOW - HORIZONTAL WITH LARGE PHOTOS
+   Clean separation: Photo block + Text block
    ======================================== */}
 
       <section 
         id="solutions"
         data-animate
-        className={`py-24 md:py-32 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden transition-all duration-1000 ${
+        className={`py-24 md:py-32 bg-gray-50 relative overflow-hidden transition-all duration-1000 ${
           visibleSections.has('solutions') 
             ? 'opacity-100 translate-y-0' 
             : 'opacity-0 translate-y-20'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
+        <div className="max-w-7xl mx-auto px-4">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-20">
             <div className="w-24 h-px bg-rose-600 mx-auto mb-8"></div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 mb-6 leading-tight tracking-tight">
               {t('solutions.title')}
             </h2>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto font-medium">
+            <p className="text-xl md:text-2xl text-gray-600 font-light">
               {t('solutions.subtitle')}
             </p>
           </div>
 
-          {/* Horizontal Phase Flow */}
-          <div className="space-y-12">
-            {/* Desktop: Horizontal Flow */}
-            <div className="hidden lg:flex items-stretch gap-4">
-              {/* Phase 1 */}
-              <div className="flex-1 group">
-                <div className="relative h-full bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500">
-                  <div 
-                    className="absolute inset-0 bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity"
-                    style={{ backgroundImage: "url('https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop')" }}
-                  ></div>
-                  <div className="relative z-10 p-8 h-full flex flex-col">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-16 h-16 bg-gradient-to-br from-rose-500 to-rose-600 rounded-2xl flex items-center justify-center shadow-lg">
-                        <Search className="w-8 h-8 text-white" />
-                      </div>
-                      <span className="text-6xl font-black bg-gradient-to-br from-rose-500 to-rose-600 bg-clip-text text-transparent">
-                        01
-                      </span>
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('solutions.phases.discovery.title')}</h3>
-                    <p className="text-lg text-gray-700 mb-2 flex-1">{t('solutions.phases.discovery.description')}</p>
-                    <p className="text-sm font-semibold text-rose-600">{t('solutions.phases.discovery.detail')}</p>
+          {/* Phase Flow - Alternating photo/text layout */}
+          <div className="space-y-24">
+            {/* Phase 1 - Photo Left, Text Right */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1">
+                <img 
+                  src="https://images.pexels.com/photos/2614818/pexels-photo-2614818.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+                  alt="Discovery Phase"
+                  className="w-full h-[400px] lg:h-[500px] object-cover rounded-2xl shadow-2xl"
+                />
+              </div>
+              <div className="order-1 lg:order-2 space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-rose-500 to-rose-600 rounded-xl flex items-center justify-center shadow-lg">
+                    <Search className="w-8 h-8 text-white" />
                   </div>
+                  <span className="text-5xl font-light text-rose-600">01</span>
                 </div>
-              </div>
-
-              {/* Arrow */}
-              <div className="flex items-center">
-                <ArrowRight className="w-8 h-8 text-gray-400" />
-              </div>
-
-              {/* Phase 2 */}
-              <div className="flex-1 group">
-                <div className="relative h-full bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500">
-                  <div 
-                    className="absolute inset-0 bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity"
-                    style={{ backgroundImage: "url('https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop')" }}
-                  ></div>
-                  <div className="relative z-10 p-8 h-full flex flex-col">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
-                        <Cpu className="w-8 h-8 text-white" />
-                      </div>
-                      <span className="text-6xl font-black bg-gradient-to-br from-purple-500 to-purple-600 bg-clip-text text-transparent">
-                        02
-                      </span>
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('solutions.phases.digitalization.title')}</h3>
-                    <p className="text-lg text-gray-700 mb-2 flex-1">{t('solutions.phases.digitalization.description')}</p>
-                    <p className="text-sm font-semibold text-purple-600">{t('solutions.phases.digitalization.detail')}</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Arrow */}
-              <div className="flex items-center">
-                <ArrowRight className="w-8 h-8 text-gray-400" />
-              </div>
-
-              {/* Phase 3 */}
-              <div className="flex-1 group">
-                <div className="relative h-full bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500">
-                  <div 
-                    className="absolute inset-0 bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity"
-                    style={{ backgroundImage: "url('https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop')" }}
-                  ></div>
-                  <div className="relative z-10 p-8 h-full flex flex-col">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg">
-                        <Building2 className="w-8 h-8 text-white" />
-                      </div>
-                      <span className="text-6xl font-black bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent">
-                        03
-                      </span>
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('solutions.phases.infrastructure.title')}</h3>
-                    <p className="text-lg text-gray-700 mb-2 flex-1">{t('solutions.phases.infrastructure.description')}</p>
-                    <p className="text-sm font-semibold text-blue-600">{t('solutions.phases.infrastructure.detail')}</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Arrow */}
-              <div className="flex items-center">
-                <ArrowRight className="w-8 h-8 text-gray-400" />
-              </div>
-
-              {/* Phase 4 */}
-              <div className="flex-1 group">
-                <div className="relative h-full bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500">
-                  <div 
-                    className="absolute inset-0 bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity"
-                    style={{ backgroundImage: "url('https://images.pexels.com/photos/1320684/pexels-photo-1320684.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop')" }}
-                  ></div>
-                  <div className="relative z-10 p-8 h-full flex flex-col">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-2xl flex items-center justify-center shadow-lg">
-                        <Send className="w-8 h-8 text-white" />
-                      </div>
-                      <span className="text-6xl font-black bg-gradient-to-br from-amber-500 to-amber-600 bg-clip-text text-transparent">
-                        04
-                      </span>
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('solutions.phases.sales.title')}</h3>
-                    <p className="text-lg text-gray-700 mb-2 flex-1">{t('solutions.phases.sales.description')}</p>
-                    <p className="text-sm font-semibold text-amber-600">{t('solutions.phases.sales.detail')}</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Arrow */}
-              <div className="flex items-center">
-                <ArrowRight className="w-8 h-8 text-gray-400" />
-              </div>
-
-              {/* Phase 5 */}
-              <div className="flex-1 group">
-                <div className="relative h-full bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500">
-                  <div 
-                    className="absolute inset-0 bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity"
-                    style={{ backgroundImage: "url('https://images.pexels.com/photos/46253/mt-fuji-sea-of-clouds-sunrise-46253.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop')" }}
-                  ></div>
-                  <div className="relative z-10 p-8 h-full flex flex-col">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center shadow-lg">
-                        <RefreshCw className="w-8 h-8 text-white" />
-                      </div>
-                      <span className="text-6xl font-black bg-gradient-to-br from-green-500 to-green-600 bg-clip-text text-transparent">
-                        05
-                      </span>
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('solutions.phases.reinvestment.title')}</h3>
-                    <p className="text-lg text-gray-700 mb-2 flex-1">{t('solutions.phases.reinvestment.description')}</p>
-                    <p className="text-sm font-semibold text-green-600">{t('solutions.phases.reinvestment.detail')}</p>
-                  </div>
-                </div>
+                <h3 className="text-3xl md:text-4xl font-bold text-gray-900">{t('solutions.phases.discovery.title')}</h3>
+                <p className="text-xl text-gray-700 leading-relaxed">{t('solutions.phases.discovery.description')}</p>
+                <p className="text-sm font-semibold text-rose-600 uppercase tracking-wider">{t('solutions.phases.discovery.detail')}</p>
               </div>
             </div>
 
-            {/* Mobile: Vertical Stacked */}
-            <div className="lg:hidden space-y-8">
-              {/* Phase 1 - Mobile */}
-              <div className="group">
-                <div className="relative bg-white rounded-3xl overflow-hidden shadow-xl">
-                  <div 
-                    className="absolute inset-0 bg-cover bg-center opacity-20"
-                    style={{ backgroundImage: "url('https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop')" }}
-                  ></div>
-                  <div className="relative z-10 p-8">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-16 h-16 bg-gradient-to-br from-rose-500 to-rose-600 rounded-2xl flex items-center justify-center shadow-lg">
-                        <Search className="w-8 h-8 text-white" />
-                      </div>
-                      <span className="text-6xl font-black bg-gradient-to-br from-rose-500 to-rose-600 bg-clip-text text-transparent">
-                        01
-                      </span>
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('solutions.phases.discovery.title')}</h3>
-                    <p className="text-lg text-gray-700 mb-2">{t('solutions.phases.discovery.description')}</p>
-                    <p className="text-sm font-semibold text-rose-600">{t('solutions.phases.discovery.detail')}</p>
+            {/* Phase 2 - Photo Right, Text Left */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+                    <Cpu className="w-8 h-8 text-white" />
                   </div>
+                  <span className="text-5xl font-light text-purple-600">02</span>
                 </div>
-                <div className="flex justify-center py-4">
-                  <ChevronDown className="w-8 h-8 text-gray-400" />
-                </div>
+                <h3 className="text-3xl md:text-4xl font-bold text-gray-900">{t('solutions.phases.digitalization.title')}</h3>
+                <p className="text-xl text-gray-700 leading-relaxed">{t('solutions.phases.digitalization.description')}</p>
+                <p className="text-sm font-semibold text-purple-600 uppercase tracking-wider">{t('solutions.phases.digitalization.detail')}</p>
               </div>
+              <div>
+                <img 
+                  src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+                  alt="Digitalization Phase"
+                  className="w-full h-[400px] lg:h-[500px] object-cover rounded-2xl shadow-2xl"
+                />
+              </div>
+            </div>
 
-              {/* Phases 2-5 Mobile (similar structure) - Abbreviated for brevity */}
-              {/* Add remaining phases with similar structure */}
+            {/* Phase 3 - Photo Left, Text Right */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1">
+                <img 
+                  src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+                  alt="Infrastructure Phase"
+                  className="w-full h-[400px] lg:h-[500px] object-cover rounded-2xl shadow-2xl"
+                />
+              </div>
+              <div className="order-1 lg:order-2 space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
+                    <Building2 className="w-8 h-8 text-white" />
+                  </div>
+                  <span className="text-5xl font-light text-blue-600">03</span>
+                </div>
+                <h3 className="text-3xl md:text-4xl font-bold text-gray-900">{t('solutions.phases.infrastructure.title')}</h3>
+                <p className="text-xl text-gray-700 leading-relaxed">{t('solutions.phases.infrastructure.description')}</p>
+                <p className="text-sm font-semibold text-blue-600 uppercase tracking-wider">{t('solutions.phases.infrastructure.detail')}</p>
+              </div>
+            </div>
+
+            {/* Phase 4 - Photo Right, Text Left */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center shadow-lg">
+                    <Send className="w-8 h-8 text-white" />
+                  </div>
+                  <span className="text-5xl font-light text-amber-600">04</span>
+                </div>
+                <h3 className="text-3xl md:text-4xl font-bold text-gray-900">{t('solutions.phases.sales.title')}</h3>
+                <p className="text-xl text-gray-700 leading-relaxed">{t('solutions.phases.sales.description')}</p>
+                <p className="text-sm font-semibold text-amber-600 uppercase tracking-wider">{t('solutions.phases.sales.detail')}</p>
+              </div>
+              <div>
+                <img 
+                  src="https://images.pexels.com/photos/1320684/pexels-photo-1320684.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+                  alt="Sales Phase"
+                  className="w-full h-[400px] lg:h-[500px] object-cover rounded-2xl shadow-2xl"
+                />
+              </div>
+            </div>
+
+            {/* Phase 5 - Photo Left, Text Right */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1">
+                <img 
+                  src="https://images.pexels.com/photos/46253/mt-fuji-sea-of-clouds-sunrise-46253.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+                  alt="Reinvestment Phase"
+                  className="w-full h-[400px] lg:h-[500px] object-cover rounded-2xl shadow-2xl"
+                />
+              </div>
+              <div className="order-1 lg:order-2 space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg">
+                    <RefreshCw className="w-8 h-8 text-white" />
+                  </div>
+                  <span className="text-5xl font-light text-green-600">05</span>
+                </div>
+                <h3 className="text-3xl md:text-4xl font-bold text-gray-900">{t('solutions.phases.reinvestment.title')}</h3>
+                <p className="text-xl text-gray-700 leading-relaxed">{t('solutions.phases.reinvestment.description')}</p>
+                <p className="text-sm font-semibold text-green-600 uppercase tracking-wider">{t('solutions.phases.reinvestment.detail')}</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
 {/* ========================================
-   NEW WHY DHJ TIMELINE WITH PHOTOS
-   Timeline-only design with photo backgrounds
+   WHY DHJ - PHOTO + TEXT SPLIT LAYOUT
+   Each reason gets a dedicated photo block
    ======================================== */}
 
       <section 
         id="why-dhj"
         data-animate
-        className={`py-24 md:py-32 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden transition-all duration-1000 ${
+        className={`py-24 md:py-32 bg-white relative overflow-hidden transition-all duration-1000 ${
           visibleSections.has('why-dhj') 
             ? 'opacity-100 translate-y-0' 
             : 'opacity-0 translate-y-20'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
+        <div className="max-w-7xl mx-auto px-4">
           {/* Section Header */}
           <div className="text-center mb-20">
             <div className="w-24 h-px bg-rose-600 mx-auto mb-8"></div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 mb-6 leading-tight tracking-tight">
               {t('whyDHJ.title')}
             </h2>
-            <p className="text-xl md:text-2xl text-gray-600 font-medium">
+            <p className="text-xl md:text-2xl text-gray-600">
               {t('whyDHJ.subtitle')}
             </p>
           </div>
 
-          {/* Timeline Layout */}
-          <div className="max-w-5xl mx-auto">
-            {/* Factor 1 */}
-            <div className="flex gap-8 group mb-16">
-              <div className="flex flex-col items-center flex-shrink-0">
-                <div className="w-20 h-20 bg-gradient-to-br from-rose-500 to-rose-600 rounded-full flex items-center justify-center shadow-2xl z-10 group-hover:scale-125 transition-all duration-500">
-                  <Target className="w-10 h-10 text-white" />
-                </div>
-                <div className="w-1 flex-1 bg-gradient-to-b from-rose-500 to-rose-300 min-h-32"></div>
+          <div className="space-y-24">
+            {/* Reason 1 */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1">
+                <img 
+                  src="https://images.pexels.com/photos/1440476/pexels-photo-1440476.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+                  alt="End-to-end support"
+                  className="w-full h-[400px] object-cover rounded-2xl shadow-2xl"
+                />
               </div>
-              <div className="flex-1">
-                <div className="relative bg-white rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:-translate-x-4">
-                  <div 
-                    className="absolute inset-0 bg-cover bg-center opacity-10 group-hover:opacity-15 transition-opacity"
-                    style={{ backgroundImage: "url('https://images.pexels.com/photos/1440476/pexels-photo-1440476.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop')" }}
-                  ></div>
-                  <div className="relative z-10 p-10">
-                    <div className="flex items-center gap-4 mb-4">
-                      <span className="text-7xl font-black bg-gradient-to-br from-rose-500 to-rose-600 bg-clip-text text-transparent">01</span>
-                      <p className="text-sm font-bold text-rose-600 uppercase tracking-wider">{t('whyDHJ.factors.integrated.detail')}</p>
-                    </div>
-                    <h3 className="text-3xl font-bold text-gray-900 mb-6 leading-tight">{t('whyDHJ.factors.integrated.title')}</h3>
-                    <p className="text-xl text-gray-700 leading-relaxed">{t('whyDHJ.factors.integrated.description')}</p>
+              <div className="order-1 lg:order-2 space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-rose-500 to-rose-600 rounded-full flex items-center justify-center shadow-xl">
+                    <Target className="w-8 h-8 text-white" />
                   </div>
+                  <span className="text-6xl font-light text-rose-600">01</span>
                 </div>
+                <p className="text-sm font-bold text-rose-600 uppercase tracking-wider">{t('whyDHJ.factors.integrated.detail')}</p>
+                <h3 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">{t('whyDHJ.factors.integrated.title')}</h3>
+                <p className="text-xl text-gray-700 leading-relaxed">{t('whyDHJ.factors.integrated.description')}</p>
               </div>
             </div>
 
-            {/* Factor 2 */}
-            <div className="flex gap-8 group mb-16">
-              <div className="flex flex-col items-center flex-shrink-0">
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl z-10 group-hover:scale-125 transition-all duration-500">
-                  <Zap className="w-10 h-10 text-white" />
-                </div>
-                <div className="w-1 flex-1 bg-gradient-to-b from-purple-500 to-purple-300 min-h-32"></div>
-              </div>
-              <div className="flex-1">
-                <div className="relative bg-white rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:-translate-x-4">
-                  <div 
-                    className="absolute inset-0 bg-cover bg-center opacity-10 group-hover:opacity-15 transition-opacity"
-                    style={{ backgroundImage: "url('https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop')" }}
-                  ></div>
-                  <div className="relative z-10 p-10">
-                    <div className="flex items-center gap-4 mb-4">
-                      <span className="text-7xl font-black bg-gradient-to-br from-purple-500 to-purple-600 bg-clip-text text-transparent">02</span>
-                      <p className="text-sm font-bold text-purple-600 uppercase tracking-wider">{t('whyDHJ.factors.digital.detail')}</p>
-                    </div>
-                    <h3 className="text-3xl font-bold text-gray-900 mb-6 leading-tight">{t('whyDHJ.factors.digital.title')}</h3>
-                    <p className="text-xl text-gray-700 leading-relaxed">{t('whyDHJ.factors.digital.description')}</p>
+            {/* Reason 2 */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center shadow-xl">
+                    <Zap className="w-8 h-8 text-white" />
                   </div>
+                  <span className="text-6xl font-light text-purple-600">02</span>
                 </div>
+                <p className="text-sm font-bold text-purple-600 uppercase tracking-wider">{t('whyDHJ.factors.digital.detail')}</p>
+                <h3 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">{t('whyDHJ.factors.digital.title')}</h3>
+                <p className="text-xl text-gray-700 leading-relaxed">{t('whyDHJ.factors.digital.description')}</p>
+              </div>
+              <div>
+                <img 
+                  src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+                  alt="Digital & DX"
+                  className="w-full h-[400px] object-cover rounded-2xl shadow-2xl"
+                />
               </div>
             </div>
 
-            {/* Factor 3 */}
-            <div className="flex gap-8 group mb-16">
-              <div className="flex flex-col items-center flex-shrink-0">
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-2xl z-10 group-hover:scale-125 transition-all duration-500">
-                  <Globe className="w-10 h-10 text-white" />
-                </div>
-                <div className="w-1 flex-1 bg-gradient-to-b from-blue-500 to-blue-300 min-h-32"></div>
+            {/* Reason 3 */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1">
+                <img 
+                  src="https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+                  alt="Global Network"
+                  className="w-full h-[400px] object-cover rounded-2xl shadow-2xl"
+                />
               </div>
-              <div className="flex-1">
-                <div className="relative bg-white rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:-translate-x-4">
-                  <div 
-                    className="absolute inset-0 bg-cover bg-center opacity-10 group-hover:opacity-15 transition-opacity"
-                    style={{ backgroundImage: "url('https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop')" }}
-                  ></div>
-                  <div className="relative z-10 p-10">
-                    <div className="flex items-center gap-4 mb-4">
-                      <span className="text-7xl font-black bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent">03</span>
-                      <p className="text-sm font-bold text-blue-600 uppercase tracking-wider">{t('whyDHJ.factors.network.detail')}</p>
-                    </div>
-                    <h3 className="text-3xl font-bold text-gray-900 mb-6 leading-tight">{t('whyDHJ.factors.network.title')}</h3>
-                    <p className="text-xl text-gray-700 leading-relaxed">{t('whyDHJ.factors.network.description')}</p>
+              <div className="order-1 lg:order-2 space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-xl">
+                    <Globe className="w-8 h-8 text-white" />
                   </div>
+                  <span className="text-6xl font-light text-blue-600">03</span>
                 </div>
+                <p className="text-sm font-bold text-blue-600 uppercase tracking-wider">{t('whyDHJ.factors.network.detail')}</p>
+                <h3 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">{t('whyDHJ.factors.network.title')}</h3>
+                <p className="text-xl text-gray-700 leading-relaxed">{t('whyDHJ.factors.network.description')}</p>
               </div>
             </div>
 
-            {/* Factor 4 */}
-            <div className="flex gap-8 group">
-              <div className="flex flex-col items-center flex-shrink-0">
-                <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-2xl z-10 group-hover:scale-125 transition-all duration-500">
-                  <CheckCircle className="w-10 h-10 text-white" />
-                </div>
-              </div>
-              <div className="flex-1">
-                <div className="relative bg-white rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 group-hover:-translate-x-4">
-                  <div 
-                    className="absolute inset-0 bg-cover bg-center opacity-10 group-hover:opacity-15 transition-opacity"
-                    style={{ backgroundImage: "url('https://images.pexels.com/photos/1320684/pexels-photo-1320684.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop')" }}
-                  ></div>
-                  <div className="relative z-10 p-10">
-                    <div className="flex items-center gap-4 mb-4">
-                      <span className="text-7xl font-black bg-gradient-to-br from-green-500 to-green-600 bg-clip-text text-transparent">04</span>
-                      <p className="text-sm font-bold text-green-600 uppercase tracking-wider">{t('whyDHJ.factors.execution.detail')}</p>
-                    </div>
-                    <h3 className="text-3xl font-bold text-gray-900 mb-6 leading-tight">{t('whyDHJ.factors.execution.title')}</h3>
-                    <p className="text-xl text-gray-700 leading-relaxed">{t('whyDHJ.factors.execution.description')}</p>
+            {/* Reason 4 */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-xl">
+                    <CheckCircle className="w-8 h-8 text-white" />
                   </div>
+                  <span className="text-6xl font-light text-green-600">04</span>
                 </div>
+                <p className="text-sm font-bold text-green-600 uppercase tracking-wider">{t('whyDHJ.factors.execution.detail')}</p>
+                <h3 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">{t('whyDHJ.factors.execution.title')}</h3>
+                <p className="text-xl text-gray-700 leading-relaxed">{t('whyDHJ.factors.execution.description')}</p>
+              </div>
+              <div>
+                <img 
+                  src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop"
+                  alt="Execution Power"
+                  className="w-full h-[400px] object-cover rounded-2xl shadow-2xl"
+                />
               </div>
             </div>
           </div>
@@ -1150,17 +1061,22 @@ function App() {
       <section 
         id="philosophy"
         data-animate
-        className={`py-32 relative overflow-hidden transition-all duration-1000 ${
+        className={`py-24 md:py-32 relative overflow-hidden transition-all duration-1000 ${
           visibleSections.has('philosophy') 
             ? 'opacity-100 translate-y-0' 
             : 'opacity-0 translate-y-20'
         }`}
       >
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-10"
-          style={{ backgroundImage: "url('https://images.pexels.com/photos/1440476/pexels-photo-1440476.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')" }}
-        ></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-white/95 to-white/90"></div>
+        {/* Large Hero Image */}
+        <div className="relative h-[600px] mb-20">
+          <img 
+            src="https://images.pexels.com/photos/1440476/pexels-photo-1440476.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+            alt="Philosophy"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+        </div>
+
         <div className="max-w-5xl mx-auto px-4 text-center relative z-10">
           <div className="mb-16">
             <p className="text-gray-400 text-sm tracking-[0.3em] uppercase font-light mb-8">
