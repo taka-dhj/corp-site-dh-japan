@@ -20,6 +20,54 @@
     "serviceDetails": "サービス詳細",
     "contact": "お問い合わせ"
   },
+  "positioning": {
+    "title": "観光産業の、総合ソリューションパートナー",
+    "subtitle": "発見する。伝える。受け入れる。届ける。",
+    "message": "この4つを一社で担うから、価値が循環する。",
+    "domains": {
+      "inbound": {
+        "title": "インバウンドツアー企画",
+        "description": "富裕層向けテーラーメイド旅行の企画・手配",
+        "detail": "地域の魅力を、世界の旅行者へ"
+      },
+      "consulting": {
+        "title": "自治体コンサルティング",
+        "description": "地域観光戦略の立案と実行支援",
+        "detail": "伊豆半島・島根での実績"
+      },
+      "dx": {
+        "title": "観光DX",
+        "description": "生成AI・データ活用による業務効率化",
+        "detail": "Meta・Google出身者が実装"
+      },
+      "property": {
+        "title": "民泊・施設運営",
+        "description": "遊休不動産の活用と高収益化運用",
+        "detail": "24時間グローバル体制"
+      }
+    }
+  },
+  "whyDHJ": {
+    "title": "なぜ、DHJにできるのか",
+    "subtitle": "3つの差別化要因が、確かな実行力を支える",
+    "factors": {
+      "digital": {
+        "title": "世界基準のデジタル実行力",
+        "description": "Meta・Google出身メンバーによる最新AI・アルゴリズムの実装",
+        "detail": "GAFAレベルの技術力を地域観光に"
+      },
+      "track": {
+        "title": "地域との協働実績",
+        "description": "伊豆半島・島根県での具体的成果と自治体からの信頼",
+        "detail": "戦略立案から実行まで伴走"
+      },
+      "global": {
+        "title": "24時間グローバル体制",
+        "description": "フィリピン拠点による多言語対応と富裕層直販チャネル",
+        "detail": "世界中の旅行者に、いつでも対応"
+      }
+    }
+  },
   "philosophy": {
     "title": "Our Philosophy",
     "heading": "心と土地を結び、<0/><1>時を紡ぐ</1>",

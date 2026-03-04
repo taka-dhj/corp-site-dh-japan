@@ -664,6 +664,205 @@ function App() {
         </div>
       </section>
 
+      {/* Positioning Section - 4 Business Domains */}
+      <section 
+        id="positioning"
+        data-animate
+        className={`py-32 md:py-40 bg-white relative transition-all duration-1000 ${
+          visibleSections.has('positioning') 
+            ? 'opacity-100 translate-y-0' 
+            : 'opacity-0 translate-y-20'
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4">
+          {/* Section Header */}
+          <div className="text-center mb-20">
+            <div className="w-24 h-px bg-rose-600 mx-auto mb-8"></div>
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight">
+              {t('positioning.title')}
+            </h2>
+            <p className="text-3xl md:text-4xl font-bold text-gray-700 mb-4">
+              {t('positioning.subtitle')}
+            </p>
+            <p className="text-xl md:text-2xl text-rose-600 font-semibold">
+              {t('positioning.message')}
+            </p>
+          </div>
+
+          {/* 4 Business Domains Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            {/* Domain 1: Inbound */}
+            <div className="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-12 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-gray-100 hover:border-rose-300">
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-24 h-24 bg-gradient-to-br from-rose-500 to-rose-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                    <Globe className="w-12 h-12 text-white" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-rose-600 transition-colors">
+                    {t('positioning.domains.inbound.title')}
+                  </h3>
+                  <p className="text-lg text-gray-700 mb-3 font-medium">
+                    {t('positioning.domains.inbound.description')}
+                  </p>
+                  <p className="text-base text-gray-500 italic">
+                    {t('positioning.domains.inbound.detail')}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Domain 2: Consulting */}
+            <div className="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-12 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-gray-100 hover:border-blue-300">
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                    <Building2 className="w-12 h-12 text-white" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+                    {t('positioning.domains.consulting.title')}
+                  </h3>
+                  <p className="text-lg text-gray-700 mb-3 font-medium">
+                    {t('positioning.domains.consulting.description')}
+                  </p>
+                  <p className="text-base text-gray-500 italic">
+                    {t('positioning.domains.consulting.detail')}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Domain 3: DX */}
+            <div className="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-12 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-gray-100 hover:border-purple-300">
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-24 h-24 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                    <Brain className="w-12 h-12 text-white" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">
+                    {t('positioning.domains.dx.title')}
+                  </h3>
+                  <p className="text-lg text-gray-700 mb-3 font-medium">
+                    {t('positioning.domains.dx.description')}
+                  </p>
+                  <p className="text-base text-gray-500 italic">
+                    {t('positioning.domains.dx.detail')}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Domain 4: Property */}
+            <div className="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-12 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-gray-100 hover:border-green-300">
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-24 h-24 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                    <Home className="w-12 h-12 text-white" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-green-600 transition-colors">
+                    {t('positioning.domains.property.title')}
+                  </h3>
+                  <p className="text-lg text-gray-700 mb-3 font-medium">
+                    {t('positioning.domains.property.description')}
+                  </p>
+                  <p className="text-base text-gray-500 italic">
+                    {t('positioning.domains.property.detail')}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why DHJ Section */}
+      <section 
+        id="why-dhj"
+        data-animate
+        className={`py-32 md:py-40 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative transition-all duration-1000 ${
+          visibleSections.has('why-dhj') 
+            ? 'opacity-100 translate-y-0' 
+            : 'opacity-0 translate-y-20'
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4">
+          {/* Section Header */}
+          <div className="text-center mb-20">
+            <div className="w-24 h-px bg-rose-600 mx-auto mb-8"></div>
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
+              {t('whyDHJ.title')}
+            </h2>
+            <p className="text-2xl md:text-3xl text-gray-700 font-semibold">
+              {t('whyDHJ.subtitle')}
+            </p>
+          </div>
+
+          {/* 3 Differentiation Factors */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+            {/* Factor 1: Digital */}
+            <div className="group bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-200">
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-rose-500 to-rose-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                  <Zap className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-rose-600 transition-colors">
+                  {t('whyDHJ.factors.digital.title')}
+                </h3>
+                <p className="text-base text-gray-700 mb-3 leading-relaxed">
+                  {t('whyDHJ.factors.digital.description')}
+                </p>
+                <p className="text-sm text-gray-500 italic">
+                  {t('whyDHJ.factors.digital.detail')}
+                </p>
+              </div>
+            </div>
+
+            {/* Factor 2: Track Record */}
+            <div className="group bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-200">
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                  <Award className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+                  {t('whyDHJ.factors.track.title')}
+                </h3>
+                <p className="text-base text-gray-700 mb-3 leading-relaxed">
+                  {t('whyDHJ.factors.track.description')}
+                </p>
+                <p className="text-sm text-gray-500 italic">
+                  {t('whyDHJ.factors.track.detail')}
+                </p>
+              </div>
+            </div>
+
+            {/* Factor 3: Global */}
+            <div className="group bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-200">
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                  <Globe className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-green-600 transition-colors">
+                  {t('whyDHJ.factors.global.title')}
+                </h3>
+                <p className="text-base text-gray-700 mb-3 leading-relaxed">
+                  {t('whyDHJ.factors.global.description')}
+                </p>
+                <p className="text-sm text-gray-500 italic">
+                  {t('whyDHJ.factors.global.detail')}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Our Philosophy Section */}
       <section 
         id="philosophy"
