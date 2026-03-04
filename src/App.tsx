@@ -1356,11 +1356,28 @@ function App() {
         </div>
       </section>
 
-              {t('strengths.subtitle')}
+      {/* Services Section */}
+      <section className="py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div 
+            id="services-header"
+            data-animate
+            className={`text-center mb-20 transition-all duration-1000 ${
+              visibleSections.has('services-header') 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-20'
+            }`}
+          >
+            <h2 className="text-5xl md:text-6xl font-normal text-gray-900 mb-8 tracking-tight">
+              {t('services.title')}
+            </h2>
+            <div className="w-24 h-px bg-rose-600 mx-auto mb-12"></div>
+            <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-medium">
+              {t('services.subtitle')}
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="space-y-24">
             <div className="text-center group">
               <div className="mb-6 flex justify-center">
                 <div className="p-6 bg-rose-600 rounded-full group-hover:scale-110 transition-transform duration-500">
