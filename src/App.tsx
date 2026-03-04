@@ -842,7 +842,6 @@ function App() {
                 </div>
                 <h3 className="text-2xl font-bold mb-4 leading-snug">{t('solutions.phases.discovery.title')}</h3>
                 <p className="text-base text-white/90 mb-3 leading-relaxed">{t('solutions.phases.discovery.description')}</p>
-                <p className="text-sm font-bold text-rose-400 uppercase tracking-wider">{t('solutions.phases.discovery.detail')}</p>
               </div>
             </div>
 
@@ -863,7 +862,7 @@ function App() {
                 </div>
                 <h3 className="text-2xl font-bold mb-4 leading-snug">{t('solutions.phases.digitalization.title')}</h3>
                 <p className="text-base text-white/90 mb-3 leading-relaxed">{t('solutions.phases.digitalization.description')}</p>
-                <p className="text-sm font-bold text-purple-400 uppercase tracking-wider">{t('solutions.phases.digitalization.detail')}</p>
+                
               </div>
             </div>
 
@@ -884,7 +883,7 @@ function App() {
                 </div>
                 <h3 className="text-2xl font-bold mb-4 leading-snug">{t('solutions.phases.infrastructure.title')}</h3>
                 <p className="text-base text-white/90 mb-3 leading-relaxed">{t('solutions.phases.infrastructure.description')}</p>
-                <p className="text-sm font-bold text-blue-400 uppercase tracking-wider">{t('solutions.phases.infrastructure.detail')}</p>
+                
               </div>
             </div>
 
@@ -905,7 +904,7 @@ function App() {
                 </div>
                 <h3 className="text-2xl font-bold mb-4 leading-snug">{t('solutions.phases.sales.title')}</h3>
                 <p className="text-base text-white/90 mb-3 leading-relaxed">{t('solutions.phases.sales.description')}</p>
-                <p className="text-sm font-bold text-amber-400 uppercase tracking-wider">{t('solutions.phases.sales.detail')}</p>
+                
               </div>
             </div>
 
@@ -926,7 +925,7 @@ function App() {
                 </div>
                 <h3 className="text-2xl font-bold mb-4 leading-snug">{t('solutions.phases.reinvestment.title')}</h3>
                 <p className="text-base text-white/90 mb-3 leading-relaxed">{t('solutions.phases.reinvestment.description')}</p>
-                <p className="text-sm font-bold text-green-400 uppercase tracking-wider">{t('solutions.phases.reinvestment.detail')}</p>
+                
               </div>
             </div>
           </div>
