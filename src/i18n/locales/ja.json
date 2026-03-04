@@ -51,44 +51,45 @@
   },
   "solutions": {
     "title": "DHJの統合ソリューション",
-    "subtitle": "地域の価値を発見し、世界へ届け、循環させる。一貫したプロセスで、持続可能な観光を実現します。",
+    "subtitle": "観光の課題は「点」ではなく「線」で解く",
+    "message": "これらの課題、DHJなら一気通貫で解決できます。",
     "phases": {
       "discovery": {
-        "title": "価値の発見・再定義",
-        "icon": "🔍",
-        "description": "戦略コンサルティング",
-        "detail": "伊豆半島・島根県での実践知見"
+        "number": "01",
+        "title": "発見・再定義",
+        "description": "地域の隠れた価値を戦略的に再発見",
+        "detail": "伊豆半島・島根県での実績"
       },
       "digitalization": {
+        "number": "02",
         "title": "デジタル化・可視化",
-        "icon": "🤖",
-        "description": "観光DX・AI活用",
-        "detail": "データで魅力を\"届く形\"へ",
-        "note": "Meta・Google出身者が世界基準のアルゴリズムで実装"
+        "description": "観光DX・AI活用でデータ化",
+        "detail": "Meta・Google出身者が実装",
+        "note": "世界基準のアルゴリズムで実装"
       },
       "infrastructure": {
-        "title": "体験の受け皿構築",
-        "icon": "🏠",
-        "description": "ツアー造成・民泊運営・AI通訳対応",
-        "detail": "英語不安も技術で解決"
+        "number": "03",
+        "title": "受け皿構築",
+        "description": "ツアー造成・民泊運営・AI通訳",
+        "detail": "言語の壁を技術で解決"
       },
       "sales": {
-        "title": "世界への販売",
-        "icon": "✈️",
+        "number": "04",
+        "title": "世界販売",
         "description": "OTA運営・海外展示会出展",
-        "detail": "海外富裕層へ直接販売",
+        "detail": "Facebook・Instagram・Googleロジック活用",
         "note": "プラットフォーム内部ロジックを理解した戦略"
       },
       "reinvestment": {
-        "title": "利益還元・再投資",
-        "icon": "🔄",
-        "description": "継続的パートナーシップ",
-        "detail": "地域と共に成長する持続可能モデル"
+        "number": "05",
+        "title": "利益還元",
+        "description": "継続的パートナーシップで成長",
+        "detail": "地域と共に持続可能な循環へ"
       }
     },
-    "cycle": {
+    "center": {
       "title": "価値循環",
-      "description": "この5つのステップが循環し、地域の観光価値を持続的に高めます"
+      "subtitle": "5つのフェーズを統合"
     }
   },
   "overview": {

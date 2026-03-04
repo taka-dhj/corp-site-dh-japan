@@ -37,7 +37,11 @@ import {
   Quote,
   ChevronDown,
   Newspaper,
-  Crown
+  Crown,
+  Search,
+  Cpu,
+  Send,
+  RefreshCw
 } from 'lucide-react';
 
 function App() {
@@ -850,269 +854,239 @@ function App() {
         </div>
       </section>
 
-      {/* DHJ Integrated Solutions Section */}
+      {/* DHJ Integrated Solutions Section - Circular Flow */}
       <section 
         id="solutions"
         data-animate
-        className={`py-24 bg-gray-50 transition-all duration-1000 ${
+        className={`py-32 md:py-40 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden transition-all duration-1000 ${
           visibleSections.has('solutions') 
             ? 'opacity-100 translate-y-0' 
             : 'opacity-0 translate-y-20'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4">
-          {/* Title and Subtitle */}
-          <div className="text-center mb-16">
-            <p className="text-gray-400 text-sm tracking-[0.3em] uppercase font-light mb-4">
-              Integrated Solutions
-            </p>
+        {/* Background decoration */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-rose-600 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-600 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
+          {/* Section Header */}
+          <div className="text-center mb-20">
             <div className="w-24 h-px bg-rose-600 mx-auto mb-8"></div>
-            <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
               {t('solutions.title')}
             </h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-2xl md:text-3xl text-gray-700 font-semibold max-w-4xl mx-auto">
               {t('solutions.subtitle')}
+            </p>
+            <p className="text-xl md:text-2xl text-rose-600 font-bold mt-8">
+              {t('solutions.message')}
             </p>
           </div>
 
-          {/* Phase Cards - Desktop: Horizontal Grid, Mobile: Vertical List */}
-          <div className="bg-white rounded-2xl shadow-md p-8 md:p-12">
-            {/* Desktop Layout - Horizontal with Arrows */}
-            <div className="hidden md:grid md:grid-cols-9 gap-4 items-center">
-              {/* Phase 1 */}
-              <div className="col-span-2 bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
-                <div className="text-4xl mb-4">{t('solutions.phases.discovery.icon')}</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {t('solutions.phases.discovery.title')}
-                </h3>
-                <p className="text-sm text-gray-600 mb-2">
-                  {t('solutions.phases.discovery.description')}
-                </p>
-                <p className="text-xs text-gray-500">
-                  {t('solutions.phases.discovery.detail')}
-                </p>
-              </div>
-              
-              {/* Arrow 1 */}
-              <div className="col-span-1 flex justify-center">
-                <ArrowRight className="w-6 h-6 text-rose-600" />
-              </div>
-
-              {/* Phase 2 */}
-              <div className="col-span-2 bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
-                <div className="text-4xl mb-4">{t('solutions.phases.digitalization.icon')}</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {t('solutions.phases.digitalization.title')}
-                </h3>
-                <p className="text-sm text-gray-600 mb-2">
-                  {t('solutions.phases.digitalization.description')}
-                </p>
-                <p className="text-xs text-gray-500 mb-2">
-                  {t('solutions.phases.digitalization.detail')}
-                </p>
-                <p className="text-xs text-gray-600 italic">
-                  {t('solutions.phases.digitalization.note')}
-                </p>
-              </div>
-              
-              {/* Arrow 2 */}
-              <div className="col-span-1 flex justify-center">
-                <ArrowRight className="w-6 h-6 text-rose-600" />
-              </div>
-
-              {/* Phase 3 */}
-              <div className="col-span-2 bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
-                <div className="text-4xl mb-4">{t('solutions.phases.infrastructure.icon')}</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {t('solutions.phases.infrastructure.title')}
-                </h3>
-                <p className="text-sm text-gray-600 mb-2">
-                  {t('solutions.phases.infrastructure.description')}
-                </p>
-                <p className="text-xs text-gray-500">
-                  {t('solutions.phases.infrastructure.detail')}
-                </p>
+          {/* Circular Flow Diagram - Desktop */}
+          <div className="hidden lg:block relative" style={{ minHeight: '800px' }}>
+            {/* Center Circle - DHJ Logo/Brand */}
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+              <div className="w-48 h-48 bg-gradient-to-br from-rose-600 to-rose-700 rounded-full shadow-2xl flex flex-col items-center justify-center">
+                <RefreshCw className="w-16 h-16 text-white mb-3 animate-spin" style={{ animationDuration: '8s' }} />
+                <p className="text-white font-bold text-xl">{t('solutions.center.title')}</p>
+                <p className="text-white/90 text-sm">{t('solutions.center.subtitle')}</p>
               </div>
             </div>
 
-            {/* Second Row for Desktop */}
-            <div className="hidden md:grid md:grid-cols-9 gap-4 items-center mt-4">
-              {/* Empty space for alignment */}
-              <div className="col-span-3"></div>
-              
-              {/* Arrow 4 (pointing down-left) */}
-              <div className="col-span-1 flex justify-center">
-                <ArrowRight className="w-6 h-6 text-rose-600 rotate-90" />
-              </div>
-              
-              {/* Empty space */}
-              <div className="col-span-1"></div>
-              
-              {/* Arrow 3 (pointing down-right) */}
-              <div className="col-span-1 flex justify-center">
-                <ArrowRight className="w-6 h-6 text-rose-600 rotate-90" />
-              </div>
-              
-              {/* Empty space */}
-              <div className="col-span-3"></div>
-            </div>
-
-            {/* Third Row for Desktop */}
-            <div className="hidden md:grid md:grid-cols-9 gap-4 items-center mt-4">
-              {/* Phase 5 */}
-              <div className="col-span-2 bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
-                <div className="text-4xl mb-4">{t('solutions.phases.reinvestment.icon')}</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {t('solutions.phases.reinvestment.title')}
-                </h3>
-                <p className="text-sm text-gray-600 mb-2">
-                  {t('solutions.phases.reinvestment.description')}
-                </p>
-                <p className="text-xs text-gray-500">
-                  {t('solutions.phases.reinvestment.detail')}
-                </p>
-              </div>
-              
-              {/* Arrow 5 (pointing left) */}
-              <div className="col-span-1 flex justify-center">
-                <ArrowRight className="w-6 h-6 text-rose-600 rotate-180" />
-              </div>
-              
-              {/* Empty space */}
-              <div className="col-span-2"></div>
-              
-              {/* Arrow 6 (pointing left) */}
-              <div className="col-span-1 flex justify-center">
-                <ArrowRight className="w-6 h-6 text-rose-600 rotate-180" />
-              </div>
-
-              {/* Phase 4 */}
-              <div className="col-span-2 bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
-                <div className="text-4xl mb-4">{t('solutions.phases.sales.icon')}</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {t('solutions.phases.sales.title')}
-                </h3>
-                <p className="text-sm text-gray-600 mb-2">
-                  {t('solutions.phases.sales.description')}
-                </p>
-                <p className="text-xs text-gray-500 mb-2">
-                  {t('solutions.phases.sales.detail')}
-                </p>
-                <p className="text-xs text-gray-600 italic">
-                  {t('solutions.phases.sales.note')}
-                </p>
-              </div>
-            </div>
-
-            {/* Mobile Layout - Vertical List */}
-            <div className="md:hidden space-y-6">
-              {/* Phase 1 */}
-              <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
-                <div className="text-4xl mb-3">{t('solutions.phases.discovery.icon')}</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {t('solutions.phases.discovery.title')}
-                </h3>
-                <p className="text-sm text-gray-600 mb-2">
-                  {t('solutions.phases.discovery.description')}
-                </p>
-                <p className="text-xs text-gray-500">
-                  {t('solutions.phases.discovery.detail')}
-                </p>
-              </div>
-              
-              <div className="flex justify-center">
-                <ArrowRight className="w-6 h-6 text-rose-600 rotate-90" />
-              </div>
-
-              {/* Phase 2 */}
-              <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
-                <div className="text-4xl mb-3">{t('solutions.phases.digitalization.icon')}</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {t('solutions.phases.digitalization.title')}
-                </h3>
-                <p className="text-sm text-gray-600 mb-2">
-                  {t('solutions.phases.digitalization.description')}
-                </p>
-                <p className="text-xs text-gray-500 mb-2">
-                  {t('solutions.phases.digitalization.detail')}
-                </p>
-                <p className="text-xs text-gray-600 italic">
-                  {t('solutions.phases.digitalization.note')}
-                </p>
-              </div>
-              
-              <div className="flex justify-center">
-                <ArrowRight className="w-6 h-6 text-rose-600 rotate-90" />
-              </div>
-
-              {/* Phase 3 */}
-              <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
-                <div className="text-4xl mb-3">{t('solutions.phases.infrastructure.icon')}</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {t('solutions.phases.infrastructure.title')}
-                </h3>
-                <p className="text-sm text-gray-600 mb-2">
-                  {t('solutions.phases.infrastructure.description')}
-                </p>
-                <p className="text-xs text-gray-500">
-                  {t('solutions.phases.infrastructure.detail')}
-                </p>
-              </div>
-              
-              <div className="flex justify-center">
-                <ArrowRight className="w-6 h-6 text-rose-600 rotate-90" />
-              </div>
-
-              {/* Phase 4 */}
-              <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
-                <div className="text-4xl mb-3">{t('solutions.phases.sales.icon')}</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {t('solutions.phases.sales.title')}
-                </h3>
-                <p className="text-sm text-gray-600 mb-2">
-                  {t('solutions.phases.sales.description')}
-                </p>
-                <p className="text-xs text-gray-500 mb-2">
-                  {t('solutions.phases.sales.detail')}
-                </p>
-                <p className="text-xs text-gray-600 italic">
-                  {t('solutions.phases.sales.note')}
-                </p>
-              </div>
-              
-              <div className="flex justify-center">
-                <ArrowRight className="w-6 h-6 text-rose-600 rotate-90" />
-              </div>
-
-              {/* Phase 5 */}
-              <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
-                <div className="text-4xl mb-3">{t('solutions.phases.reinvestment.icon')}</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {t('solutions.phases.reinvestment.title')}
-                </h3>
-                <p className="text-sm text-gray-600 mb-2">
-                  {t('solutions.phases.reinvestment.description')}
-                </p>
-                <p className="text-xs text-gray-500">
-                  {t('solutions.phases.reinvestment.detail')}
-                </p>
-              </div>
-            </div>
-
-            {/* Value Cycle Illustration */}
-            <div className="mt-12 pt-8 border-t border-gray-200">
-              <div className="text-center">
-                <div className="flex items-center justify-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-rose-600 rounded-full flex items-center justify-center">
-                    <ArrowRight className="w-6 h-6 text-white transform rotate-[135deg]" />
-                  </div>
-                  <h3 className="text-2xl font-semibold text-gray-900">
-                    {t('solutions.cycle.title')}
-                  </h3>
+            {/* Phase 1 - Top */}
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2">
+              <div className="group w-64 bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-rose-200 hover:border-rose-400">
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-rose-500 to-rose-600 rounded-2xl mb-4 mx-auto group-hover:scale-110 transition-transform">
+                  <Search className="w-8 h-8 text-white" />
                 </div>
-                <p className="text-gray-600 max-w-2xl mx-auto">
-                  {t('solutions.cycle.description')}
-                </p>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-rose-600 mb-2">{t('solutions.phases.discovery.number')}</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{t('solutions.phases.discovery.title')}</h3>
+                  <p className="text-sm text-gray-600 mb-2">{t('solutions.phases.discovery.description')}</p>
+                  <p className="text-xs text-gray-500 italic">{t('solutions.phases.discovery.detail')}</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Phase 2 - Top Right */}
+            <div className="absolute top-24 right-16">
+              <div className="group w-64 bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-purple-200 hover:border-purple-400">
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl mb-4 mx-auto group-hover:scale-110 transition-transform">
+                  <Cpu className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-purple-600 mb-2">{t('solutions.phases.digitalization.number')}</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{t('solutions.phases.digitalization.title')}</h3>
+                  <p className="text-sm text-gray-600 mb-2">{t('solutions.phases.digitalization.description')}</p>
+                  <p className="text-xs text-gray-500 italic mb-2">{t('solutions.phases.digitalization.detail')}</p>
+                  <p className="text-xs text-purple-600 font-semibold">{t('solutions.phases.digitalization.note')}</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Phase 3 - Bottom Right */}
+            <div className="absolute bottom-24 right-16">
+              <div className="group w-64 bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-blue-200 hover:border-blue-400">
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl mb-4 mx-auto group-hover:scale-110 transition-transform">
+                  <Building2 className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-blue-600 mb-2">{t('solutions.phases.infrastructure.number')}</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{t('solutions.phases.infrastructure.title')}</h3>
+                  <p className="text-sm text-gray-600 mb-2">{t('solutions.phases.infrastructure.description')}</p>
+                  <p className="text-xs text-gray-500 italic">{t('solutions.phases.infrastructure.detail')}</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Phase 4 - Bottom Left */}
+            <div className="absolute bottom-24 left-16">
+              <div className="group w-64 bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-amber-200 hover:border-amber-400">
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-2xl mb-4 mx-auto group-hover:scale-110 transition-transform">
+                  <Send className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-amber-600 mb-2">{t('solutions.phases.sales.number')}</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{t('solutions.phases.sales.title')}</h3>
+                  <p className="text-sm text-gray-600 mb-2">{t('solutions.phases.sales.description')}</p>
+                  <p className="text-xs text-gray-500 italic mb-2">{t('solutions.phases.sales.detail')}</p>
+                  <p className="text-xs text-amber-600 font-semibold">{t('solutions.phases.sales.note')}</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Phase 5 - Top Left */}
+            <div className="absolute top-24 left-16">
+              <div className="group w-64 bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-green-200 hover:border-green-400">
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl mb-4 mx-auto group-hover:scale-110 transition-transform">
+                  <RefreshCw className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-green-600 mb-2">{t('solutions.phases.reinvestment.number')}</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{t('solutions.phases.reinvestment.title')}</h3>
+                  <p className="text-sm text-gray-600 mb-2">{t('solutions.phases.reinvestment.description')}</p>
+                  <p className="text-xs text-gray-500 italic">{t('solutions.phases.reinvestment.detail')}</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Connecting Arrows - Circular Flow */}
+            <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 1 }}>
+              <defs>
+                <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                  <polygon points="0 0, 10 3, 0 6" fill="#E11D48" />
+                </marker>
+              </defs>
+              {/* Animated stroke for flowing effect */}
+              <circle cx="50%" cy="50%" r="320" fill="none" stroke="#E11D48" strokeWidth="4" strokeDasharray="20 10" opacity="0.3" className="animate-spin" style={{ animationDuration: '30s', transformOrigin: 'center' }} />
+            </svg>
+          </div>
+
+          {/* Mobile/Tablet Layout - Vertical Stack */}
+          <div className="lg:hidden space-y-8">
+            {/* Phase 1 */}
+            <div className="group bg-white rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-rose-200">
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-20 h-20 bg-gradient-to-br from-rose-500 to-rose-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Search className="w-10 h-10 text-white" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <div className="text-3xl font-bold text-rose-600 mb-2">{t('solutions.phases.discovery.number')}</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('solutions.phases.discovery.title')}</h3>
+                  <p className="text-base text-gray-600 mb-2">{t('solutions.phases.discovery.description')}</p>
+                  <p className="text-sm text-gray-500 italic">{t('solutions.phases.discovery.detail')}</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex justify-center">
+              <ChevronRight className="w-8 h-8 text-rose-600 rotate-90" />
+            </div>
+
+            {/* Phase 2 */}
+            <div className="group bg-white rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-purple-200">
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Cpu className="w-10 h-10 text-white" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <div className="text-3xl font-bold text-purple-600 mb-2">{t('solutions.phases.digitalization.number')}</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('solutions.phases.digitalization.title')}</h3>
+                  <p className="text-base text-gray-600 mb-2">{t('solutions.phases.digitalization.description')}</p>
+                  <p className="text-sm text-gray-500 italic mb-2">{t('solutions.phases.digitalization.detail')}</p>
+                  <p className="text-sm text-purple-600 font-semibold">{t('solutions.phases.digitalization.note')}</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex justify-center">
+              <ChevronRight className="w-8 h-8 text-purple-600 rotate-90" />
+            </div>
+
+            {/* Phase 3 */}
+            <div className="group bg-white rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-blue-200">
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Building2 className="w-10 h-10 text-white" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">{t('solutions.phases.infrastructure.number')}</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('solutions.phases.infrastructure.title')}</h3>
+                  <p className="text-base text-gray-600 mb-2">{t('solutions.phases.infrastructure.description')}</p>
+                  <p className="text-sm text-gray-500 italic">{t('solutions.phases.infrastructure.detail')}</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex justify-center">
+              <ChevronRight className="w-8 h-8 text-blue-600 rotate-90" />
+            </div>
+
+            {/* Phase 4 */}
+            <div className="group bg-white rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-amber-200">
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-20 h-20 bg-gradient-to-br from-amber-500 to-amber-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Send className="w-10 h-10 text-white" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <div className="text-3xl font-bold text-amber-600 mb-2">{t('solutions.phases.sales.number')}</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('solutions.phases.sales.title')}</h3>
+                  <p className="text-base text-gray-600 mb-2">{t('solutions.phases.sales.description')}</p>
+                  <p className="text-sm text-gray-500 italic mb-2">{t('solutions.phases.sales.detail')}</p>
+                  <p className="text-sm text-amber-600 font-semibold">{t('solutions.phases.sales.note')}</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex justify-center">
+              <ChevronRight className="w-8 h-8 text-amber-600 rotate-90" />
+            </div>
+
+            {/* Phase 5 */}
+            <div className="group bg-white rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-green-200">
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <RefreshCw className="w-10 h-10 text-white" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <div className="text-3xl font-bold text-green-600 mb-2">{t('solutions.phases.reinvestment.number')}</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('solutions.phases.reinvestment.title')}</h3>
+                  <p className="text-base text-gray-600 mb-2">{t('solutions.phases.reinvestment.description')}</p>
+                  <p className="text-sm text-gray-500 italic">{t('solutions.phases.reinvestment.detail')}</p>
+                </div>
               </div>
             </div>
           </div>

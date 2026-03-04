@@ -51,44 +51,45 @@
   },
   "solutions": {
     "title": "DHJ's Integrated Solutions",
-    "subtitle": "Discover regional value, deliver it to the world, and create a sustainable cycle. Our comprehensive approach realizes sustainable tourism.",
+    "subtitle": "Solving tourism challenges not as 'points' but as a 'line'",
+    "message": "These challenges - DHJ solves them end-to-end.",
     "phases": {
       "discovery": {
-        "title": "Discovery & Redefinition",
-        "icon": "🔍",
-        "description": "Strategic Consulting",
-        "detail": "Proven expertise in Izu Peninsula and Shimane"
+        "number": "01",
+        "title": "Discovery",
+        "description": "Strategic rediscovery of hidden regional value",
+        "detail": "Proven track record: Izu, Shimane"
       },
       "digitalization": {
-        "title": "Digitalization & Visualization",
-        "icon": "🤖",
-        "description": "Tourism DX & AI Integration",
-        "detail": "Transform appeal into deliverable content",
-        "note": "Implemented by Meta & Google alumni using world-class algorithms"
+        "number": "02",
+        "title": "Digitalization",
+        "description": "Tourism DX & AI-driven data transformation",
+        "detail": "Implemented by Meta/Google alumni",
+        "note": "World-class algorithms"
       },
       "infrastructure": {
-        "title": "Infrastructure Building",
-        "icon": "🏠",
-        "description": "Tour Creation, Vacation Rentals, AI Translation",
-        "detail": "Technology solves language barriers"
+        "number": "03",
+        "title": "Infrastructure",
+        "description": "Tour creation, vacation rentals, AI translation",
+        "detail": "Technology breaks language barriers"
       },
       "sales": {
+        "number": "04",
         "title": "Global Sales",
-        "icon": "✈️",
-        "description": "OTA Operations, International Exhibitions",
-        "detail": "Direct sales to affluent overseas travelers",
-        "note": "Strategy leveraging platform algorithm expertise"
+        "description": "OTA operations, international exhibitions",
+        "detail": "Facebook/Instagram/Google logic",
+        "note": "Platform algorithm expertise"
       },
       "reinvestment": {
-        "title": "Profit Sharing & Reinvestment",
-        "icon": "🔄",
-        "description": "Continuous Partnership",
-        "detail": "Sustainable model growing with communities"
+        "number": "05",
+        "title": "Reinvestment",
+        "description": "Continuous partnership for growth",
+        "detail": "Sustainable cycle with communities"
       }
     },
-    "cycle": {
+    "center": {
       "title": "Value Cycle",
-      "description": "These five steps continuously cycle to sustainably enhance regional tourism value"
+      "subtitle": "5 Phases Integrated"
     }
   },
   "overview": {
