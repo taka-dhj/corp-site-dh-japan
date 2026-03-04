@@ -664,120 +664,167 @@ function App() {
         </div>
       </section>
 
-      {/* Positioning Section - 4 Business Domains */}
+      {/* Positioning & Solutions Section - Circular Flow */}
       <section 
-        id="positioning"
+        id="solutions"
         data-animate
-        className={`py-32 md:py-40 bg-white relative transition-all duration-1000 ${
-          visibleSections.has('positioning') 
+        className={`py-32 md:py-48 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden transition-all duration-1000 ${
+          visibleSections.has('solutions') 
             ? 'opacity-100 translate-y-0' 
             : 'opacity-0 translate-y-20'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4">
+        {/* Background decoration */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-rose-600 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-600 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
           {/* Section Header */}
-          <div className="text-center mb-20">
+          <div className="text-center mb-24">
             <div className="w-24 h-px bg-rose-600 mx-auto mb-8"></div>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               {t('positioning.title')}
             </h2>
-            <p className="text-3xl md:text-4xl font-bold text-gray-700 mb-4">
+            <p className="text-2xl md:text-3xl font-semibold text-gray-700 mb-12">
               {t('positioning.subtitle')}
             </p>
-            <p className="text-xl md:text-2xl text-rose-600 font-semibold">
-              {t('positioning.message')}
+            <h3 className="text-3xl md:text-4xl font-bold text-rose-600 mb-4">
+              {t('solutions.title')}
+            </h3>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+              {t('solutions.subtitle')}
             </p>
           </div>
 
-          {/* 4 Business Domains Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-            {/* Domain 1: Inbound */}
-            <div className="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-12 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-gray-100 hover:border-rose-300">
-              <div className="flex items-start gap-6">
-                <div className="flex-shrink-0">
-                  <div className="w-24 h-24 bg-gradient-to-br from-rose-500 to-rose-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg">
-                    <Globe className="w-12 h-12 text-white" />
+          {/* Circular Flow Diagram - Desktop */}
+          <div className="hidden lg:block relative" style={{ minHeight: '1000px' }}>
+            {/* Center Circle - DHJ */}
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30">
+              <div className="w-56 h-56 bg-gradient-to-br from-rose-600 to-rose-700 rounded-full shadow-2xl flex flex-col items-center justify-center">
+                <RefreshCw className="w-20 h-20 text-white mb-4 animate-spin" style={{ animationDuration: '10s' }} />
+                <p className="text-white font-bold text-2xl">{t('solutions.center.title')}</p>
+                <p className="text-white/90 text-base">{t('solutions.center.subtitle')}</p>
+              </div>
+            </div>
+
+            {/* Phase 1 - Top (12 o'clock) */}
+            <div className="absolute" style={{ top: '40px', left: '50%', transform: 'translateX(-50%)' }}>
+              <div className="group w-80 bg-white rounded-3xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2 border-2 border-rose-200 hover:border-rose-400">
+                <div className="text-center">
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-rose-500 to-rose-600 rounded-2xl mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                    <Search className="w-10 h-10 text-white" />
                   </div>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-rose-600 transition-colors">
-                    {t('positioning.domains.inbound.title')}
-                  </h3>
-                  <p className="text-lg text-gray-700 mb-3 font-medium">
-                    {t('positioning.domains.inbound.description')}
-                  </p>
-                  <p className="text-base text-gray-500 italic">
-                    {t('positioning.domains.inbound.detail')}
-                  </p>
+                  <div className="text-5xl font-bold text-rose-600 mb-2">{t('solutions.phases.discovery.number')}</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('solutions.phases.discovery.title')}</h3>
+                  <p className="text-base text-gray-700 mb-2 leading-relaxed">{t('solutions.phases.discovery.description')}</p>
+                  <p className="text-sm text-gray-500 italic">{t('solutions.phases.discovery.detail')}</p>
                 </div>
               </div>
             </div>
 
-            {/* Domain 2: Consulting */}
-            <div className="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-12 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-gray-100 hover:border-blue-300">
-              <div className="flex items-start gap-6">
-                <div className="flex-shrink-0">
-                  <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg">
-                    <Building2 className="w-12 h-12 text-white" />
+            {/* Phase 2 - Top Right (2 o'clock) */}
+            <div className="absolute" style={{ top: '180px', right: '80px' }}>
+              <div className="group w-80 bg-white rounded-3xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2 border-2 border-purple-200 hover:border-purple-400">
+                <div className="text-center">
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                    <Cpu className="w-10 h-10 text-white" />
                   </div>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
-                    {t('positioning.domains.consulting.title')}
-                  </h3>
-                  <p className="text-lg text-gray-700 mb-3 font-medium">
-                    {t('positioning.domains.consulting.description')}
-                  </p>
-                  <p className="text-base text-gray-500 italic">
-                    {t('positioning.domains.consulting.detail')}
-                  </p>
+                  <div className="text-5xl font-bold text-purple-600 mb-2">{t('solutions.phases.digitalization.number')}</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('solutions.phases.digitalization.title')}</h3>
+                  <p className="text-base text-gray-700 mb-2 leading-relaxed">{t('solutions.phases.digitalization.description')}</p>
+                  <p className="text-sm text-gray-500 italic">{t('solutions.phases.digitalization.detail')}</p>
                 </div>
               </div>
             </div>
 
-            {/* Domain 3: DX */}
-            <div className="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-12 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-gray-100 hover:border-purple-300">
-              <div className="flex items-start gap-6">
-                <div className="flex-shrink-0">
-                  <div className="w-24 h-24 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg">
-                    <Brain className="w-12 h-12 text-white" />
+            {/* Phase 3 - Bottom Right (4 o'clock) */}
+            <div className="absolute" style={{ bottom: '180px', right: '80px' }}>
+              <div className="group w-80 bg-white rounded-3xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2 border-2 border-blue-200 hover:border-blue-400">
+                <div className="text-center">
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                    <Building2 className="w-10 h-10 text-white" />
                   </div>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">
-                    {t('positioning.domains.dx.title')}
-                  </h3>
-                  <p className="text-lg text-gray-700 mb-3 font-medium">
-                    {t('positioning.domains.dx.description')}
-                  </p>
-                  <p className="text-base text-gray-500 italic">
-                    {t('positioning.domains.dx.detail')}
-                  </p>
+                  <div className="text-5xl font-bold text-blue-600 mb-2">{t('solutions.phases.infrastructure.number')}</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('solutions.phases.infrastructure.title')}</h3>
+                  <p className="text-base text-gray-700 mb-2 leading-relaxed">{t('solutions.phases.infrastructure.description')}</p>
+                  <p className="text-sm text-gray-500 italic">{t('solutions.phases.infrastructure.detail')}</p>
                 </div>
               </div>
             </div>
 
-            {/* Domain 4: Property */}
-            <div className="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-12 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-gray-100 hover:border-green-300">
-              <div className="flex items-start gap-6">
-                <div className="flex-shrink-0">
-                  <div className="w-24 h-24 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg">
-                    <Home className="w-12 h-12 text-white" />
+            {/* Phase 4 - Bottom Left (8 o'clock) */}
+            <div className="absolute" style={{ bottom: '180px', left: '80px' }}>
+              <div className="group w-80 bg-white rounded-3xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2 border-2 border-amber-200 hover:border-amber-400">
+                <div className="text-center">
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-amber-500 to-amber-600 rounded-2xl mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                    <Send className="w-10 h-10 text-white" />
                   </div>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-green-600 transition-colors">
-                    {t('positioning.domains.property.title')}
-                  </h3>
-                  <p className="text-lg text-gray-700 mb-3 font-medium">
-                    {t('positioning.domains.property.description')}
-                  </p>
-                  <p className="text-base text-gray-500 italic">
-                    {t('positioning.domains.property.detail')}
-                  </p>
+                  <div className="text-5xl font-bold text-amber-600 mb-2">{t('solutions.phases.sales.number')}</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('solutions.phases.sales.title')}</h3>
+                  <p className="text-base text-gray-700 mb-2 leading-relaxed">{t('solutions.phases.sales.description')}</p>
+                  <p className="text-sm text-gray-500 italic">{t('solutions.phases.sales.detail')}</p>
                 </div>
               </div>
             </div>
+
+            {/* Phase 5 - Top Left (10 o'clock) */}
+            <div className="absolute" style={{ top: '180px', left: '80px' }}>
+              <div className="group w-80 bg-white rounded-3xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2 border-2 border-green-200 hover:border-green-400">
+                <div className="text-center">
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                    <RefreshCw className="w-10 h-10 text-white" />
+                  </div>
+                  <div className="text-5xl font-bold text-green-600 mb-2">{t('solutions.phases.reinvestment.number')}</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('solutions.phases.reinvestment.title')}</h3>
+                  <p className="text-base text-gray-700 mb-2 leading-relaxed">{t('solutions.phases.reinvestment.description')}</p>
+                  <p className="text-sm text-gray-500 italic">{t('solutions.phases.reinvestment.detail')}</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Connecting Circle - SVG */}
+            <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 1 }}>
+              <circle cx="50%" cy="50%" r="380" fill="none" stroke="#E11D48" strokeWidth="3" strokeDasharray="15 8" opacity="0.2" className="animate-spin" style={{ animationDuration: '40s', transformOrigin: 'center' }} />
+            </svg>
+          </div>
+
+          {/* Mobile/Tablet Layout - Vertical Stack */}
+          <div className="lg:hidden space-y-10">
+            {[
+              { phase: 'discovery', icon: Search, color: 'rose' },
+              { phase: 'digitalization', icon: Cpu, color: 'purple' },
+              { phase: 'infrastructure', icon: Building2, color: 'blue' },
+              { phase: 'sales', icon: Send, color: 'amber' },
+              { phase: 'reinvestment', icon: RefreshCw, color: 'green' }
+            ].map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <div key={item.phase}>
+                  <div className={`group bg-white rounded-3xl p-10 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2 border-2 border-${item.color}-200`}>
+                    <div className="flex items-start gap-6">
+                      <div className="flex-shrink-0">
+                        <div className={`w-24 h-24 bg-gradient-to-br from-${item.color}-500 to-${item.color}-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg`}>
+                          <Icon className="w-12 h-12 text-white" />
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <div className={`text-4xl font-bold text-${item.color}-600 mb-2`}>{t(`solutions.phases.${item.phase}.number`)}</div>
+                        <h3 className="text-2xl font-bold text-gray-900 mb-3">{t(`solutions.phases.${item.phase}.title`)}</h3>
+                        <p className="text-lg text-gray-700 mb-2 leading-relaxed">{t(`solutions.phases.${item.phase}.description`)}</p>
+                        <p className="text-base text-gray-500 italic">{t(`solutions.phases.${item.phase}.detail`)}</p>
+                      </div>
+                    </div>
+                  </div>
+                  {index < 4 && (
+                    <div className="flex justify-center my-6">
+                      <ChevronRight className={`w-10 h-10 text-${item.color}-600 rotate-90`} />
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

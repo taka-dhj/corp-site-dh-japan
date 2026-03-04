@@ -22,29 +22,46 @@
   },
   "positioning": {
     "title": "Comprehensive Solution Partner for Tourism Industry",
-    "subtitle": "Discover. Communicate. Host. Deliver.",
-    "message": "By handling all four in-house, we create a value cycle.",
-    "domains": {
-      "inbound": {
-        "title": "Inbound Tour Planning",
-        "description": "Tailor-made travel planning for affluent travelers",
-        "detail": "Connecting regional charm to the world"
+    "subtitle": "Discover. Communicate. Host. Deliver. All in one company."
+  },
+  "solutions": {
+    "title": "End-to-End Value Cycle",
+    "subtitle": "Five phases working together to create sustainable tourism",
+    "phases": {
+      "discovery": {
+        "number": "01",
+        "title": "Discovery",
+        "description": "Strategic rediscovery of hidden regional value",
+        "detail": "Track record: Izu, Shimane"
       },
-      "consulting": {
-        "title": "Regional Consulting",
-        "description": "Tourism strategy formulation and execution support",
-        "detail": "Proven track record: Izu, Shimane"
+      "digitalization": {
+        "number": "02",
+        "title": "Visualization",
+        "description": "Transform appeal with AI & data",
+        "detail": "Meta/Google alumni"
       },
-      "dx": {
-        "title": "Tourism DX",
-        "description": "AI & data-driven operational efficiency",
-        "detail": "Implemented by Meta/Google alumni"
+      "infrastructure": {
+        "number": "03",
+        "title": "Infrastructure",
+        "description": "Tours, lodging, translation ready",
+        "detail": "Breaking language barriers"
       },
-      "property": {
-        "title": "Property Management",
-        "description": "Monetization of underutilized real estate",
-        "detail": "24/7 global operations"
+      "sales": {
+        "number": "04",
+        "title": "Sales",
+        "description": "Direct access to global affluent travelers",
+        "detail": "OTA & exhibitions"
+      },
+      "reinvestment": {
+        "number": "05",
+        "title": "Reinvestment",
+        "description": "Profit flows back to communities",
+        "detail": "Sustainable growth"
       }
+    },
+    "center": {
+      "title": "DHJ",
+      "subtitle": "Center of Value Cycle"
     }
   },
   "whyDHJ": {

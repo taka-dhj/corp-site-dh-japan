@@ -22,29 +22,46 @@
   },
   "positioning": {
     "title": "観光産業の、総合ソリューションパートナー",
-    "subtitle": "発見する。伝える。受け入れる。届ける。",
-    "message": "この4つを一社で担うから、価値が循環する。",
-    "domains": {
-      "inbound": {
-        "title": "インバウンドツアー企画",
-        "description": "富裕層向けテーラーメイド旅行の企画・手配",
-        "detail": "地域の魅力を、世界の旅行者へ"
+    "subtitle": "発見する。伝える。受け入れる。届ける。この全てを一社で。"
+  },
+  "solutions": {
+    "title": "一気通貫の価値循環",
+    "subtitle": "5つのフェーズが連携し、持続可能な観光を実現",
+    "phases": {
+      "discovery": {
+        "number": "01",
+        "title": "発見",
+        "description": "地域の隠れた価値を戦略的に再発見",
+        "detail": "伊豆・島根での実績"
       },
-      "consulting": {
-        "title": "自治体コンサルティング",
-        "description": "地域観光戦略の立案と実行支援",
-        "detail": "伊豆半島・島根での実績"
+      "digitalization": {
+        "number": "02",
+        "title": "可視化",
+        "description": "AI・データで魅力を届く形に",
+        "detail": "Meta・Google出身者"
       },
-      "dx": {
-        "title": "観光DX",
-        "description": "生成AI・データ活用による業務効率化",
-        "detail": "Meta・Google出身者が実装"
+      "infrastructure": {
+        "number": "03",
+        "title": "受け皿",
+        "description": "ツアー・民泊・通訳を整備",
+        "detail": "言語の壁を解決"
       },
-      "property": {
-        "title": "民泊・施設運営",
-        "description": "遊休不動産の活用と高収益化運用",
-        "detail": "24時間グローバル体制"
+      "sales": {
+        "number": "04",
+        "title": "販売",
+        "description": "世界の富裕層へ直接届ける",
+        "detail": "OTA・展示会"
+      },
+      "reinvestment": {
+        "number": "05",
+        "title": "還元",
+        "description": "利益を地域へ循環させる",
+        "detail": "持続可能な成長"
       }
+    },
+    "center": {
+      "title": "DHJ",
+      "subtitle": "価値循環の中心"
     }
   },
   "whyDHJ": {
