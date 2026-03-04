@@ -59,7 +59,7 @@
       "discovery": {
         "number": "01",
         "title": "発見",
-        "description": "地域の隠れた価値を戦略的に再発見",
+        "description": "日本の隠れた価値を再発見",
         "detail": "伊豆・島根での実績"
       },
       "digitalization": {
@@ -70,9 +70,9 @@
       },
       "infrastructure": {
         "number": "03",
-        "title": "受け皿",
-        "description": "ツアー・民泊・通訳を整備",
-        "detail": "言語の壁を解決"
+        "title": "受け入れ",
+        "description": "言語の壁や課題を解決",
+        "detail": "ツアー・民泊・通訳"
       },
       "sales": {
         "number": "04",
@@ -83,7 +83,7 @@
       "reinvestment": {
         "number": "05",
         "title": "還元",
-        "description": "利益を地域へ循環させる",
+        "description": "利益を地域へ循環",
         "detail": "持続可能な成長"
       }
     },
@@ -144,7 +144,7 @@
     }
   },
   "services": {
-    "title": "主要サービス",
+    "title": "具体的な事業",
     "subtitle": "5つの専門領域で、日本の観光業界に革新をもたらします",
     "inboundTour": {
       "title": "インバウンドツアー企画・造成",
