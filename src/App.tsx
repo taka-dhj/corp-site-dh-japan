@@ -707,6 +707,275 @@ function App() {
         </div>
       </section>
 
+      {/* DHJ Integrated Solutions Section */}
+      <section 
+        id="solutions"
+        data-animate
+        className={`py-24 bg-gray-50 transition-all duration-1000 ${
+          visibleSections.has('solutions') 
+            ? 'opacity-100 translate-y-0' 
+            : 'opacity-0 translate-y-20'
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4">
+          {/* Title and Subtitle */}
+          <div className="text-center mb-16">
+            <p className="text-gray-400 text-sm tracking-[0.3em] uppercase font-light mb-4">
+              Integrated Solutions
+            </p>
+            <div className="w-24 h-px bg-rose-600 mx-auto mb-8"></div>
+            <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6">
+              {t('solutions.title')}
+            </h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+              {t('solutions.subtitle')}
+            </p>
+          </div>
+
+          {/* Phase Cards - Desktop: Horizontal Grid, Mobile: Vertical List */}
+          <div className="bg-white rounded-2xl shadow-md p-8 md:p-12">
+            {/* Desktop Layout - Horizontal with Arrows */}
+            <div className="hidden md:grid md:grid-cols-9 gap-4 items-center">
+              {/* Phase 1 */}
+              <div className="col-span-2 bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+                <div className="text-4xl mb-4">{t('solutions.phases.discovery.icon')}</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {t('solutions.phases.discovery.title')}
+                </h3>
+                <p className="text-sm text-gray-600 mb-2">
+                  {t('solutions.phases.discovery.description')}
+                </p>
+                <p className="text-xs text-gray-500">
+                  {t('solutions.phases.discovery.detail')}
+                </p>
+              </div>
+              
+              {/* Arrow 1 */}
+              <div className="col-span-1 flex justify-center">
+                <ArrowRight className="w-6 h-6 text-rose-600" />
+              </div>
+
+              {/* Phase 2 */}
+              <div className="col-span-2 bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+                <div className="text-4xl mb-4">{t('solutions.phases.digitalization.icon')}</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {t('solutions.phases.digitalization.title')}
+                </h3>
+                <p className="text-sm text-gray-600 mb-2">
+                  {t('solutions.phases.digitalization.description')}
+                </p>
+                <p className="text-xs text-gray-500 mb-2">
+                  {t('solutions.phases.digitalization.detail')}
+                </p>
+                <p className="text-xs text-gray-600 italic">
+                  {t('solutions.phases.digitalization.note')}
+                </p>
+              </div>
+              
+              {/* Arrow 2 */}
+              <div className="col-span-1 flex justify-center">
+                <ArrowRight className="w-6 h-6 text-rose-600" />
+              </div>
+
+              {/* Phase 3 */}
+              <div className="col-span-2 bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+                <div className="text-4xl mb-4">{t('solutions.phases.infrastructure.icon')}</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {t('solutions.phases.infrastructure.title')}
+                </h3>
+                <p className="text-sm text-gray-600 mb-2">
+                  {t('solutions.phases.infrastructure.description')}
+                </p>
+                <p className="text-xs text-gray-500">
+                  {t('solutions.phases.infrastructure.detail')}
+                </p>
+              </div>
+            </div>
+
+            {/* Second Row for Desktop */}
+            <div className="hidden md:grid md:grid-cols-9 gap-4 items-center mt-4">
+              {/* Empty space for alignment */}
+              <div className="col-span-3"></div>
+              
+              {/* Arrow 4 (pointing down-left) */}
+              <div className="col-span-1 flex justify-center">
+                <ArrowRight className="w-6 h-6 text-rose-600 rotate-90" />
+              </div>
+              
+              {/* Empty space */}
+              <div className="col-span-1"></div>
+              
+              {/* Arrow 3 (pointing down-right) */}
+              <div className="col-span-1 flex justify-center">
+                <ArrowRight className="w-6 h-6 text-rose-600 rotate-90" />
+              </div>
+              
+              {/* Empty space */}
+              <div className="col-span-3"></div>
+            </div>
+
+            {/* Third Row for Desktop */}
+            <div className="hidden md:grid md:grid-cols-9 gap-4 items-center mt-4">
+              {/* Phase 5 */}
+              <div className="col-span-2 bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+                <div className="text-4xl mb-4">{t('solutions.phases.reinvestment.icon')}</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {t('solutions.phases.reinvestment.title')}
+                </h3>
+                <p className="text-sm text-gray-600 mb-2">
+                  {t('solutions.phases.reinvestment.description')}
+                </p>
+                <p className="text-xs text-gray-500">
+                  {t('solutions.phases.reinvestment.detail')}
+                </p>
+              </div>
+              
+              {/* Arrow 5 (pointing left) */}
+              <div className="col-span-1 flex justify-center">
+                <ArrowRight className="w-6 h-6 text-rose-600 rotate-180" />
+              </div>
+              
+              {/* Empty space */}
+              <div className="col-span-2"></div>
+              
+              {/* Arrow 6 (pointing left) */}
+              <div className="col-span-1 flex justify-center">
+                <ArrowRight className="w-6 h-6 text-rose-600 rotate-180" />
+              </div>
+
+              {/* Phase 4 */}
+              <div className="col-span-2 bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+                <div className="text-4xl mb-4">{t('solutions.phases.sales.icon')}</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {t('solutions.phases.sales.title')}
+                </h3>
+                <p className="text-sm text-gray-600 mb-2">
+                  {t('solutions.phases.sales.description')}
+                </p>
+                <p className="text-xs text-gray-500 mb-2">
+                  {t('solutions.phases.sales.detail')}
+                </p>
+                <p className="text-xs text-gray-600 italic">
+                  {t('solutions.phases.sales.note')}
+                </p>
+              </div>
+            </div>
+
+            {/* Mobile Layout - Vertical List */}
+            <div className="md:hidden space-y-6">
+              {/* Phase 1 */}
+              <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
+                <div className="text-4xl mb-3">{t('solutions.phases.discovery.icon')}</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {t('solutions.phases.discovery.title')}
+                </h3>
+                <p className="text-sm text-gray-600 mb-2">
+                  {t('solutions.phases.discovery.description')}
+                </p>
+                <p className="text-xs text-gray-500">
+                  {t('solutions.phases.discovery.detail')}
+                </p>
+              </div>
+              
+              <div className="flex justify-center">
+                <ArrowRight className="w-6 h-6 text-rose-600 rotate-90" />
+              </div>
+
+              {/* Phase 2 */}
+              <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
+                <div className="text-4xl mb-3">{t('solutions.phases.digitalization.icon')}</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {t('solutions.phases.digitalization.title')}
+                </h3>
+                <p className="text-sm text-gray-600 mb-2">
+                  {t('solutions.phases.digitalization.description')}
+                </p>
+                <p className="text-xs text-gray-500 mb-2">
+                  {t('solutions.phases.digitalization.detail')}
+                </p>
+                <p className="text-xs text-gray-600 italic">
+                  {t('solutions.phases.digitalization.note')}
+                </p>
+              </div>
+              
+              <div className="flex justify-center">
+                <ArrowRight className="w-6 h-6 text-rose-600 rotate-90" />
+              </div>
+
+              {/* Phase 3 */}
+              <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
+                <div className="text-4xl mb-3">{t('solutions.phases.infrastructure.icon')}</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {t('solutions.phases.infrastructure.title')}
+                </h3>
+                <p className="text-sm text-gray-600 mb-2">
+                  {t('solutions.phases.infrastructure.description')}
+                </p>
+                <p className="text-xs text-gray-500">
+                  {t('solutions.phases.infrastructure.detail')}
+                </p>
+              </div>
+              
+              <div className="flex justify-center">
+                <ArrowRight className="w-6 h-6 text-rose-600 rotate-90" />
+              </div>
+
+              {/* Phase 4 */}
+              <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
+                <div className="text-4xl mb-3">{t('solutions.phases.sales.icon')}</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {t('solutions.phases.sales.title')}
+                </h3>
+                <p className="text-sm text-gray-600 mb-2">
+                  {t('solutions.phases.sales.description')}
+                </p>
+                <p className="text-xs text-gray-500 mb-2">
+                  {t('solutions.phases.sales.detail')}
+                </p>
+                <p className="text-xs text-gray-600 italic">
+                  {t('solutions.phases.sales.note')}
+                </p>
+              </div>
+              
+              <div className="flex justify-center">
+                <ArrowRight className="w-6 h-6 text-rose-600 rotate-90" />
+              </div>
+
+              {/* Phase 5 */}
+              <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
+                <div className="text-4xl mb-3">{t('solutions.phases.reinvestment.icon')}</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {t('solutions.phases.reinvestment.title')}
+                </h3>
+                <p className="text-sm text-gray-600 mb-2">
+                  {t('solutions.phases.reinvestment.description')}
+                </p>
+                <p className="text-xs text-gray-500">
+                  {t('solutions.phases.reinvestment.detail')}
+                </p>
+              </div>
+            </div>
+
+            {/* Value Cycle Illustration */}
+            <div className="mt-12 pt-8 border-t border-gray-200">
+              <div className="text-center">
+                <div className="flex items-center justify-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-rose-600 rounded-full flex items-center justify-center">
+                    <ArrowRight className="w-6 h-6 text-white transform rotate-[135deg]" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-gray-900">
+                    {t('solutions.cycle.title')}
+                  </h3>
+                </div>
+                <p className="text-gray-600 max-w-2xl mx-auto">
+                  {t('solutions.cycle.description')}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Business Overview */}
       <section 
         id="overview"

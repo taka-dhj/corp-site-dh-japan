@@ -27,6 +27,48 @@
     "description2": "We cherish encounters with authentic life, culture, and atmosphere found beyond over-commercialized tourist destinations, and redefine the value of travel.",
     "description3": "By serving as a bridge connecting regions and travelers, and addressing social issues through alleviating overtourism and regional revitalization, we advocate for a <0>new era of tourism</0> woven through people, regions, and the world."
   },
+  "solutions": {
+    "title": "DHJ's Integrated Solutions",
+    "subtitle": "Discover regional value, deliver it to the world, and create a sustainable cycle. Our comprehensive approach realizes sustainable tourism.",
+    "phases": {
+      "discovery": {
+        "title": "Discovery & Redefinition",
+        "icon": "🔍",
+        "description": "Strategic Consulting",
+        "detail": "Proven expertise in Izu Peninsula and Shimane"
+      },
+      "digitalization": {
+        "title": "Digitalization & Visualization",
+        "icon": "🤖",
+        "description": "Tourism DX & AI Integration",
+        "detail": "Transform appeal into deliverable content",
+        "note": "Implemented by Meta & Google alumni using world-class algorithms"
+      },
+      "infrastructure": {
+        "title": "Infrastructure Building",
+        "icon": "🏠",
+        "description": "Tour Creation, Vacation Rentals, AI Translation",
+        "detail": "Technology solves language barriers"
+      },
+      "sales": {
+        "title": "Global Sales",
+        "icon": "✈️",
+        "description": "OTA Operations, International Exhibitions",
+        "detail": "Direct sales to affluent overseas travelers",
+        "note": "Strategy leveraging platform algorithm expertise"
+      },
+      "reinvestment": {
+        "title": "Profit Sharing & Reinvestment",
+        "icon": "🔄",
+        "description": "Continuous Partnership",
+        "detail": "Sustainable model growing with communities"
+      }
+    },
+    "cycle": {
+      "title": "Value Cycle",
+      "description": "These five steps continuously cycle to sustainably enhance regional tourism value"
+    }
+  },
   "overview": {
     "title": "Business Overview",
     "description": "With a focus on <0>alleviating overtourism</0> and <1>regional revitalization</1>,<2/> we create a sustainable future for tourism"
