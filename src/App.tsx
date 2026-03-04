@@ -801,12 +801,6 @@ function App() {
       </section>
 
 {/* ========================================
-   5-PHASE FLOW - HORIZONTAL WITH LARGE PHOTOS
-   Clean separation: Photo block + Text block
-   ======================================== */}
-
-      <section 
-{/* ========================================
    5-PHASE HORIZONTAL SCROLL DESIGN
    Full-width horizontal flow with large photos
    ======================================== */}
