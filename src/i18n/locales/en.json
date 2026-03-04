@@ -15,14 +15,42 @@
     "title": "Hidden Gems of Japan, to the World.",
     "subtitle": "Creating New Tourism, Together.",
     "description": "Inbound travel, regional collaboration, digital solutions, and property operations. From discovering and storytelling to hosting and selling, we handle the entire journey as your trusted partner.",
-    "cta1": "Our Solutions",
-    "cta2": "Contact Us",
+    "cta1": "For Government & Corporate",
+    "cta2": "For Overseas Partners",
+    "cta3": "For Premium Travelers",
     "serviceDetails": "Service Details",
     "contact": "Contact"
   },
   "positioning": {
     "title": "Comprehensive Solution Partner for Tourism Industry",
     "subtitle": "Discover. Communicate. Host. Deliver. All in one company."
+  },
+  "domains": {
+    "title": "Tourism Solutions by DHJ",
+    "subtitle": "Enhancing tourism value across four domains",
+    "message": "Connecting these four to realize sustainable tourism",
+    "items": {
+      "inbound": {
+        "title": "Inbound Tours / DMC",
+        "description": "Tailor-made travel planning for affluent travelers",
+        "tag": "B2C / B2B"
+      },
+      "consulting": {
+        "title": "Regional Consulting",
+        "description": "From strategy formulation to execution support",
+        "tag": "Strategy / Execution"
+      },
+      "dx": {
+        "title": "Tourism DX / Technology",
+        "description": "Data & AI-driven efficiency and results maximization",
+        "tag": "Meta / Google"
+      },
+      "property": {
+        "title": "Property Management",
+        "description": "High-profit operations of underutilized assets",
+        "tag": "Operations / Execution"
+      }
+    }
   },
   "solutions": {
     "title": "End-to-End Value Cycle",
@@ -66,22 +94,27 @@
   },
   "whyDHJ": {
     "title": "Why DHJ Can Deliver",
-    "subtitle": "Three differentiators supporting proven execution",
+    "subtitle": "Real differentiation factors are here",
     "factors": {
+      "integrated": {
+        "title": "End-to-End Integrated Support",
+        "description": "Discovery, visualization, infrastructure, sales, and reinvestment. By supporting the entire tourism process seamlessly, we maximize regional value.",
+        "detail": "Lines, not just points"
+      },
       "digital": {
-        "title": "World-Class Digital Execution",
-        "description": "Latest AI & algorithms implemented by Meta/Google alumni",
-        "detail": "GAFA-level tech for regional tourism"
+        "title": "Data & DX-First Tourism Strategy",
+        "description": "Implementation of cutting-edge AI and algorithms by Meta/Google alumni. World-class technical capabilities applied to regional tourism.",
+        "detail": "GAFA-level implementation power"
       },
-      "track": {
-        "title": "Regional Partnership Track Record",
-        "description": "Concrete results in Izu Peninsula and Shimane with government trust",
-        "detail": "From strategy to execution support"
+      "network": {
+        "title": "Global × Local Connectivity",
+        "description": "Both affluent international networks and trust from municipalities and regions. Only by having both can we deliver real results.",
+        "detail": "Proven track record in Izu and Shimane"
       },
-      "global": {
-        "title": "24/7 Global Operations",
-        "description": "Philippines hub for multilingual support and direct affluent sales channels",
-        "detail": "Always ready for travelers worldwide"
+      "execution": {
+        "title": "Execution Power Through On-Site Operations",
+        "description": "We execute even vacation rental and tour operations in-house. Not just strategy—a partner that accompanies you to the end.",
+        "detail": "From strategy to execution"
       }
     }
   },
