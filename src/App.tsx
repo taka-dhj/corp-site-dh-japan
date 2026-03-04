@@ -1066,18 +1066,9 @@ function App() {
             </div>
           </div>
         </div>
-
-        {/* Add scrollbar hide CSS */}
-        <style jsx>{`
-          .scrollbar-hide::-webkit-scrollbar {
-            display: none;
-          }
-          .scrollbar-hide {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-          }
-        `}</style>
       </section>
+
+      <section 
         id="why-dhj"
         data-animate
         className={`py-24 md:py-32 bg-white relative overflow-hidden transition-all duration-1000 ${
