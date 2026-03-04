@@ -1142,7 +1142,6 @@ function App() {
         </div>
       </section>
 
-      <section 
       {/* Services Section */}
       <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4">
