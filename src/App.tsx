@@ -1146,6 +1146,8 @@ function App() {
           </div>
         </div>
       </section>
+
+      <section 
         id="why-dhj"
         data-animate
         className={`py-24 md:py-32 bg-white relative overflow-hidden transition-all duration-1000 ${
