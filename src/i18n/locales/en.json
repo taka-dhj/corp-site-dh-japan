@@ -12,8 +12,11 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Connecting authentic Japan <0/>with the world,<0/> <1>creating unforgettable journeys</1>",
-    "subtitle": "We weave regional stories and propose<0/> new value for the future of tourism",
+    "title": "Hidden Gems of Japan, to the World.",
+    "subtitle": "Creating New Tourism, Together.",
+    "description": "Inbound travel, regional collaboration, digital solutions, and property operations. From discovering and storytelling to hosting and selling, we handle the entire journey as your trusted partner.",
+    "cta1": "Our Solutions",
+    "cta2": "Contact Us",
     "serviceDetails": "Service Details",
     "contact": "Contact"
   },

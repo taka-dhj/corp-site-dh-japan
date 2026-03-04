@@ -610,27 +610,17 @@ function App() {
               ? 'text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.2] sm:leading-[1.2] md:leading-[1.1] max-w-5xl mx-auto' 
               : 'text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-[8rem] leading-[1.3] sm:leading-[1.3] md:leading-[1.2]'
           }`}>
-            {i18n.language === 'ja' ? (
-              <>
-                本物の日本と<br className="hidden md:block" />
-                世界をつなぎ、<br className="hidden md:block" />
-                <span className="text-rose-600">心に残る旅を創る</span>
-              </>
-            ) : (
-              <Trans 
-                i18nKey="hero.title" 
-                components={{ 
-                  0: <br />,
-                  1: <span className="text-rose-600" />
-                }} 
-              />
-            )}
+            {t('hero.title')}
           </h1>
 
           <p className="hero-subtitle text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl text-gray-200 mb-24 sm:mb-32 md:mb-32 max-w-4xl mx-auto leading-[1.4] font-bold">
             <span className="font-extrabold">
-              <Trans i18nKey="hero.subtitle" components={{ 0: <br /> }} />
+              {t('hero.subtitle')}
             </span>
+          </p>
+
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+            {t('hero.description')}
           </p>
 
           <div className="hero-buttons flex flex-col sm:flex-row gap-4 sm:gap-4 md:gap-8 justify-center items-center px-4">
@@ -648,7 +638,7 @@ function App() {
               }}
               className="hero-button group relative bg-rose-600 hover:bg-rose-700 text-white px-24 sm:px-8 md:px-12 py-12 sm:py-4 md:py-6 transition-all duration-500 flex items-center gap-2 sm:gap-4 hover:gap-6 transform hover:-translate-y-1"
             >
-              <span className="text-base sm:text-sm md:text-lg font-light leading-tight">{t('hero.serviceDetails')}</span>
+              <span className="text-base sm:text-sm md:text-lg font-light leading-tight">{t('hero.cta1')}</span>
               <ChevronRight className="w-6 h-6 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" />
             </button>
             <button
@@ -657,7 +647,7 @@ function App() {
             >
               <span className="flex items-center gap-2 sm:gap-3 text-base sm:text-sm md:text-lg font-light leading-tight">
                 <Mail className="w-6 h-6 sm:w-5 sm:h-5" />
-                {t('hero.contact')}
+                {t('hero.cta2')}
               </span>
             </button>
           </div>
