@@ -20,6 +20,28 @@
     "serviceDetails": "サービス詳細",
     "contact": "お問い合わせ"
   },
+  "challenges": {
+    "title": "日本の観光には、こんな課題がありませんか？",
+    "subtitle": "地域・事業者・自治体が直面する、観光産業の4つの壁",
+    "items": {
+      "appeal": {
+        "title": "地域の魅力が伝わらない",
+        "description": "素晴らしい文化・自然があるのに、誰にも知られていない"
+      },
+      "economy": {
+        "title": "観光客は増えても地域が潤わない",
+        "description": "人は来るが消費が少なく、地域経済への還元が弱い"
+      },
+      "inbound": {
+        "title": "インバウンド対応への不安",
+        "description": "言語・決済・文化対応など、受け入れ体制が追いつかない"
+      },
+      "digital": {
+        "title": "デジタル活用の効果が見えない",
+        "description": "ツールは導入したが、成果に繋がらず運用も大変"
+      }
+    }
+  },
   "philosophy": {
     "title": "Our Philosophy",
     "heading": "心と土地を結び、<0/><1>時を紡ぐ</1>",

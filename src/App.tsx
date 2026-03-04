@@ -22,6 +22,10 @@ import {
   Sparkles,
   Play,
   Calendar,
+  AlertCircle,
+  DollarSign,
+  Languages,
+  BarChart3,
   Heart,
   Shield,
   Mail,
@@ -660,6 +664,145 @@ function App() {
               <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
             </div>
             <p className="text-white/60 text-xs tracking-widest">{t('common.scroll')}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Challenges Section - NEW */}
+      <section 
+        id="challenges"
+        data-animate
+        className={`py-32 md:py-40 bg-gradient-to-br from-gray-50 via-gray-100 to-gray-50 relative transition-all duration-1000 ${
+          visibleSections.has('challenges') 
+            ? 'opacity-100 translate-y-0' 
+            : 'opacity-0 translate-y-20'
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4">
+          {/* Section Header */}
+          <div className="text-center mb-20">
+            <div className="w-24 h-px bg-rose-600 mx-auto mb-8"></div>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+              {t('challenges.title')}
+            </h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+              {t('challenges.subtitle')}
+            </p>
+          </div>
+
+          {/* Challenges Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            {/* Challenge 1: Appeal */}
+            <div 
+              className="group bg-white rounded-2xl p-12 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-200 hover:border-rose-200"
+              data-animate
+            >
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-rose-50 to-rose-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                    <Mountain className="w-10 h-10 text-rose-600" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-rose-600 transition-colors">
+                    {t('challenges.items.appeal.title')}
+                  </h3>
+                  <p className="text-lg text-gray-600 leading-relaxed">
+                    {t('challenges.items.appeal.description')}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Challenge 2: Economy */}
+            <div 
+              className="group bg-white rounded-2xl p-12 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-200 hover:border-amber-200"
+              data-animate
+            >
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-amber-50 to-amber-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                    <DollarSign className="w-10 h-10 text-amber-600" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-amber-600 transition-colors">
+                    {t('challenges.items.economy.title')}
+                  </h3>
+                  <p className="text-lg text-gray-600 leading-relaxed">
+                    {t('challenges.items.economy.description')}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Challenge 3: Inbound */}
+            <div 
+              className="group bg-white rounded-2xl p-12 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-200 hover:border-blue-200"
+              data-animate
+            >
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                    <Languages className="w-10 h-10 text-blue-600" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+                    {t('challenges.items.inbound.title')}
+                  </h3>
+                  <p className="text-lg text-gray-600 leading-relaxed">
+                    {t('challenges.items.inbound.description')}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Challenge 4: Digital */}
+            <div 
+              className="group bg-white rounded-2xl p-12 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-200 hover:border-purple-200"
+              data-animate
+            >
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-purple-50 to-purple-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                    <BarChart3 className="w-10 h-10 text-purple-600" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">
+                    {t('challenges.items.digital.title')}
+                  </h3>
+                  <p className="text-lg text-gray-600 leading-relaxed">
+                    {t('challenges.items.digital.description')}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="text-center mt-20">
+            <p className="text-xl md:text-2xl font-bold text-gray-900 mb-8">
+              これらの課題、<span className="text-rose-600">DHJなら一気通貫で解決できます。</span>
+            </p>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById('services-header');
+                if (element) {
+                  const offsetTop = element.offsetTop - 120;
+                  window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                  });
+                }
+              }}
+              className="group inline-flex items-center gap-3 bg-rose-600 hover:bg-rose-700 text-white px-10 py-5 rounded-full text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+            >
+              解決策を見る
+              <ChevronRight className="w-6 h-6 transition-transform group-hover:translate-x-1" />
+            </button>
           </div>
         </div>
       </section>

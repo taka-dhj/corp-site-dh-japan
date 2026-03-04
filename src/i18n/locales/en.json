@@ -20,6 +20,28 @@
     "serviceDetails": "Service Details",
     "contact": "Contact"
   },
+  "challenges": {
+    "title": "Does Japanese tourism face these challenges?",
+    "subtitle": "Four barriers confronting regions, businesses, and local governments",
+    "items": {
+      "appeal": {
+        "title": "Regional appeal not reaching the world",
+        "description": "Amazing culture and nature remain unknown to potential visitors"
+      },
+      "economy": {
+        "title": "Tourism growth without local prosperity",
+        "description": "Visitors come but spending is low, weak economic return to communities"
+      },
+      "inbound": {
+        "title": "Anxiety about inbound readiness",
+        "description": "Language, payment, cultural gaps - infrastructure can't keep pace"
+      },
+      "digital": {
+        "title": "Unclear results from digital tools",
+        "description": "Technology adopted but outcomes unclear, operations burdensome"
+      }
+    }
+  },
   "philosophy": {
     "title": "Our Philosophy",
     "heading": "Connecting hearts and land,<0/> <1>weaving stories through time</1>",
