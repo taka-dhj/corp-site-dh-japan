@@ -33,7 +33,11 @@ import {
   Quote,
   ChevronDown,
   Newspaper,
-  Crown
+  Crown,
+  Search,
+  Cpu,
+  Send,
+  RefreshCw
 } from 'lucide-react';
 
 function App() {
