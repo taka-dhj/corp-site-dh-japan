@@ -28,7 +28,7 @@
   "domains": {
     "title": "Tourism Solutions by DHJ",
     "subtitle": "Enhancing tourism value across four domains",
-    "message": "Connecting these four to realize sustainable tourism",
+    "tagline": "Discover. Communicate. Welcome. Deliver.",
     "items": {
       "inbound": {
         "title": "Inbound Tours / DMC",
@@ -94,7 +94,7 @@
   },
   "whyDHJ": {
     "title": "Why DHJ Can Deliver",
-    "subtitle": "Real differentiation factors are here",
+    "subtitle": "Four Reasons",
     "factors": {
       "integrated": {
         "title": "End-to-End Integrated Support",

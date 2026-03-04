@@ -28,7 +28,7 @@
   "domains": {
     "title": "DHJが提供する観光ソリューション",
     "subtitle": "4つの領域で、観光の価値を高める",
-    "message": "この4つを連携させ、持続可能な観光を実現",
+    "tagline": "発見する。伝える。受け入れる。届ける。",
     "items": {
       "inbound": {
         "title": "インバウンドツアー / DMC",
@@ -94,7 +94,7 @@
   },
   "whyDHJ": {
     "title": "なぜ、DHJにできるのか",
-    "subtitle": "本当の差別化要因は、ここにある",
+    "subtitle": "4つの理由",
     "factors": {
       "integrated": {
         "title": "事業横断の一気通貫サポート",

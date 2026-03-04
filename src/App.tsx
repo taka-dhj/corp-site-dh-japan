@@ -50,6 +50,7 @@ function App() {
   const [isContactFormOpen, setIsContactFormOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
+  const [whyDHJPattern, setWhyDHJPattern] = useState<'A' | 'B' | 'C'>('A');
 
   // URLから言語を検出してi18nを同期
   useEffect(() => {
@@ -787,10 +788,10 @@ function App() {
             </div>
           </div>
 
-          {/* Bottom Message */}
-          <div className="text-center">
-            <p className="text-2xl md:text-3xl font-bold text-gray-900">
-              {t('domains.message')}
+          {/* Tagline */}
+          <div className="text-center mt-16">
+            <p className="text-3xl md:text-4xl font-bold text-gray-900 tracking-wider">
+              {t('domains.tagline')}
             </p>
           </div>
         </div>
@@ -816,16 +817,10 @@ function App() {
           {/* Section Header */}
           <div className="text-center mb-24">
             <div className="w-24 h-px bg-rose-600 mx-auto mb-8"></div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              {t('positioning.title')}
-            </h2>
-            <p className="text-2xl md:text-3xl font-semibold text-gray-700 mb-12">
-              {t('positioning.subtitle')}
-            </p>
-            <h3 className="text-3xl md:text-4xl font-bold text-rose-600 mb-4">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-rose-600 mb-8 leading-tight">
               {t('solutions.title')}
-            </h3>
-            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+            </h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-12">
               {t('solutions.subtitle')}
             </p>
           </div>
@@ -961,7 +956,7 @@ function App() {
         </div>
       </section>
 
-      {/* Why DHJ Section */}
+      {/* Why DHJ Section with Pattern Switcher */}
       <section 
         id="why-dhj"
         data-animate
@@ -973,94 +968,363 @@ function App() {
       >
         <div className="max-w-7xl mx-auto px-4">
           {/* Section Header */}
-          <div className="text-center mb-20">
+          <div className="text-center mb-12">
             <div className="w-24 h-px bg-rose-600 mx-auto mb-8"></div>
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
               {t('whyDHJ.title')}
             </h2>
-            <p className="text-2xl md:text-3xl text-gray-700 font-semibold">
+            <p className="text-xl md:text-2xl text-gray-600 mb-8">
               {t('whyDHJ.subtitle')}
             </p>
+            
+            {/* Pattern Switcher */}
+            <div className="flex flex-wrap justify-center gap-3 mb-12">
+              <button
+                onClick={() => setWhyDHJPattern('A')}
+                className={`px-4 py-2 md:px-6 md:py-3 rounded-lg text-sm md:text-base font-semibold transition-all ${
+                  whyDHJPattern === 'A'
+                    ? 'bg-rose-600 text-white shadow-lg'
+                    : 'bg-white text-gray-600 hover:bg-gray-100 border-2 border-gray-200'
+                }`}
+              >
+                A: 数字カウントアップ
+              </button>
+              <button
+                onClick={() => setWhyDHJPattern('B')}
+                className={`px-4 py-2 md:px-6 md:py-3 rounded-lg text-sm md:text-base font-semibold transition-all ${
+                  whyDHJPattern === 'B'
+                    ? 'bg-rose-600 text-white shadow-lg'
+                    : 'bg-white text-gray-600 hover:bg-gray-100 border-2 border-gray-200'
+                }`}
+              >
+                B: 縦長カード
+              </button>
+              <button
+                onClick={() => setWhyDHJPattern('C')}
+                className={`px-4 py-2 md:px-6 md:py-3 rounded-lg text-sm md:text-base font-semibold transition-all ${
+                  whyDHJPattern === 'C'
+                    ? 'bg-rose-600 text-white shadow-lg'
+                    : 'bg-white text-gray-600 hover:bg-gray-100 border-2 border-gray-200'
+                }`}
+              >
+                C: タイムライン
+              </button>
+            </div>
           </div>
 
-          {/* 4 Differentiation Factors - 2x2 Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
-            {/* Factor 1: Integrated Support */}
-            <div className="group bg-white rounded-3xl p-12 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-3 border-2 border-gray-100 hover:border-rose-300 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-rose-500/10 to-transparent rounded-full blur-3xl"></div>
-              <div className="relative z-10">
-                <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-rose-500 to-rose-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-500 shadow-xl">
-                  <Target className="w-12 h-12 text-white" />
+          {/* Pattern A: 数字カウントアップ＋左右分割 */}
+          {whyDHJPattern === 'A' && (
+            <div className="space-y-8 max-w-6xl mx-auto">
+              {/* Factor 1: Integrated - Rose */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-white rounded-3xl p-8 md:p-12 shadow-2xl hover:shadow-3xl transition-all duration-500 group">
+                <div className="text-center lg:text-left">
+                  <div className="inline-flex items-center gap-6">
+                    <div className="text-7xl md:text-9xl font-black bg-gradient-to-br from-rose-500 to-rose-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform">
+                      01
+                    </div>
+                    <div className="w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-rose-500 to-rose-600 rounded-3xl flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                      <Target className="w-12 h-12 md:w-16 md:h-16 text-white" />
+                    </div>
+                  </div>
+                  <p className="text-xl md:text-2xl font-bold text-rose-600 mt-6">
+                    {t('whyDHJ.factors.integrated.detail')}
+                  </p>
                 </div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-rose-600 transition-colors leading-tight">
+                <div>
+                  <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                    {t('whyDHJ.factors.integrated.title')}
+                  </h3>
+                  <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                    {t('whyDHJ.factors.integrated.description')}
+                  </p>
+                </div>
+              </div>
+
+              {/* Factor 2: Digital - Purple (Reversed) */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-white rounded-3xl p-8 md:p-12 shadow-2xl hover:shadow-3xl transition-all duration-500 group">
+                <div className="lg:order-2 text-center lg:text-right">
+                  <div className="inline-flex items-center gap-6 lg:justify-end lg:w-full">
+                    <div className="w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-purple-500 to-purple-600 rounded-3xl flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                      <Zap className="w-12 h-12 md:w-16 md:h-16 text-white" />
+                    </div>
+                    <div className="text-7xl md:text-9xl font-black bg-gradient-to-br from-purple-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform">
+                      02
+                    </div>
+                  </div>
+                  <p className="text-xl md:text-2xl font-bold text-purple-600 mt-6">
+                    {t('whyDHJ.factors.digital.detail')}
+                  </p>
+                </div>
+                <div className="lg:order-1">
+                  <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                    {t('whyDHJ.factors.digital.title')}
+                  </h3>
+                  <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                    {t('whyDHJ.factors.digital.description')}
+                  </p>
+                </div>
+              </div>
+
+              {/* Factor 3: Network - Blue */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-white rounded-3xl p-8 md:p-12 shadow-2xl hover:shadow-3xl transition-all duration-500 group">
+                <div className="text-center lg:text-left">
+                  <div className="inline-flex items-center gap-6">
+                    <div className="text-7xl md:text-9xl font-black bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform">
+                      03
+                    </div>
+                    <div className="w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                      <Globe className="w-12 h-12 md:w-16 md:h-16 text-white" />
+                    </div>
+                  </div>
+                  <p className="text-xl md:text-2xl font-bold text-blue-600 mt-6">
+                    {t('whyDHJ.factors.network.detail')}
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                    {t('whyDHJ.factors.network.title')}
+                  </h3>
+                  <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                    {t('whyDHJ.factors.network.description')}
+                  </p>
+                </div>
+              </div>
+
+              {/* Factor 4: Execution - Green (Reversed) */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-white rounded-3xl p-8 md:p-12 shadow-2xl hover:shadow-3xl transition-all duration-500 group">
+                <div className="lg:order-2 text-center lg:text-right">
+                  <div className="inline-flex items-center gap-6 lg:justify-end lg:w-full">
+                    <div className="w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-green-500 to-green-600 rounded-3xl flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                      <CheckCircle className="w-12 h-12 md:w-16 md:h-16 text-white" />
+                    </div>
+                    <div className="text-7xl md:text-9xl font-black bg-gradient-to-br from-green-500 to-green-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform">
+                      04
+                    </div>
+                  </div>
+                  <p className="text-xl md:text-2xl font-bold text-green-600 mt-6">
+                    {t('whyDHJ.factors.execution.detail')}
+                  </p>
+                </div>
+                <div className="lg:order-1">
+                  <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                    {t('whyDHJ.factors.execution.title')}
+                  </h3>
+                  <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                    {t('whyDHJ.factors.execution.description')}
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Pattern B: 縦長カード＋横アイコン */}
+          {whyDHJPattern === 'B' && (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+              {/* Factor 1: Integrated - Rose */}
+              <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 group hover:-translate-y-2">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-rose-500 to-rose-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                    <Target className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-sm font-bold text-rose-600">
+                      {t('whyDHJ.factors.integrated.detail')}
+                    </p>
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 leading-tight">
                   {t('whyDHJ.factors.integrated.title')}
                 </h3>
-                <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+                <p className="text-base text-gray-700 leading-relaxed">
                   {t('whyDHJ.factors.integrated.description')}
                 </p>
-                <p className="text-sm text-rose-600 font-semibold">
-                  {t('whyDHJ.factors.integrated.detail')}
-                </p>
               </div>
-            </div>
 
-            {/* Factor 2: Digital & DX */}
-            <div className="group bg-white rounded-3xl p-12 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-3 border-2 border-gray-100 hover:border-purple-300 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-500/10 to-transparent rounded-full blur-3xl"></div>
-              <div className="relative z-10">
-                <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-500 shadow-xl">
-                  <Zap className="w-12 h-12 text-white" />
+              {/* Factor 2: Digital - Purple */}
+              <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 group hover:-translate-y-2">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                    <Zap className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-sm font-bold text-purple-600">
+                      {t('whyDHJ.factors.digital.detail')}
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors leading-tight">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 leading-tight">
                   {t('whyDHJ.factors.digital.title')}
                 </h3>
-                <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+                <p className="text-base text-gray-700 leading-relaxed">
                   {t('whyDHJ.factors.digital.description')}
                 </p>
-                <p className="text-sm text-purple-600 font-semibold">
-                  {t('whyDHJ.factors.digital.detail')}
-                </p>
               </div>
-            </div>
 
-            {/* Factor 3: Global × Local Network */}
-            <div className="group bg-white rounded-3xl p-12 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-3 border-2 border-gray-100 hover:border-blue-300 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-transparent rounded-full blur-3xl"></div>
-              <div className="relative z-10">
-                <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-500 shadow-xl">
-                  <Globe className="w-12 h-12 text-white" />
+              {/* Factor 3: Network - Blue */}
+              <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 group hover:-translate-y-2">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                    <Globe className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-sm font-bold text-blue-600">
+                      {t('whyDHJ.factors.network.detail')}
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors leading-tight">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 leading-tight">
                   {t('whyDHJ.factors.network.title')}
                 </h3>
-                <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+                <p className="text-base text-gray-700 leading-relaxed">
                   {t('whyDHJ.factors.network.description')}
                 </p>
-                <p className="text-sm text-blue-600 font-semibold">
-                  {t('whyDHJ.factors.network.detail')}
-                </p>
               </div>
-            </div>
 
-            {/* Factor 4: Execution Power */}
-            <div className="group bg-white rounded-3xl p-12 shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-3 border-2 border-gray-100 hover:border-green-300 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-500/10 to-transparent rounded-full blur-3xl"></div>
-              <div className="relative z-10">
-                <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-500 shadow-xl">
-                  <CheckCircle className="w-12 h-12 text-white" />
+              {/* Factor 4: Execution - Green */}
+              <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 group hover:-translate-y-2">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                    <CheckCircle className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-sm font-bold text-green-600">
+                      {t('whyDHJ.factors.execution.detail')}
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-green-600 transition-colors leading-tight">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 leading-tight">
                   {t('whyDHJ.factors.execution.title')}
                 </h3>
-                <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+                <p className="text-base text-gray-700 leading-relaxed">
                   {t('whyDHJ.factors.execution.description')}
-                </p>
-                <p className="text-sm text-green-600 font-semibold">
-                  {t('whyDHJ.factors.execution.detail')}
                 </p>
               </div>
             </div>
-          </div>
+          )}
+
+          {/* Pattern C: タイムライン型 */}
+          {whyDHJPattern === 'C' && (
+            <div className="max-w-4xl mx-auto">
+              {/* Factor 1: Integrated - Rose */}
+              <div className="flex gap-8 group">
+                <div className="flex flex-col items-center">
+                  <div className="w-20 h-20 bg-gradient-to-br from-rose-500 to-rose-600 rounded-full flex items-center justify-center shadow-xl z-10 group-hover:scale-125 transition-all duration-500">
+                    <Target className="w-10 h-10 text-white" />
+                  </div>
+                  <div className="w-1 flex-1 bg-gradient-to-b from-rose-500 to-rose-300 min-h-24"></div>
+                </div>
+                <div className="flex-1 pb-16">
+                  <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 group-hover:-translate-x-2">
+                    <div className="flex items-center gap-4 mb-4">
+                      <span className="text-6xl font-black bg-gradient-to-br from-rose-500 to-rose-600 bg-clip-text text-transparent">
+                        01
+                      </span>
+                      <div className="flex-1">
+                        <p className="text-sm font-bold text-rose-600">
+                          {t('whyDHJ.factors.integrated.detail')}
+                        </p>
+                      </div>
+                    </div>
+                    <h3 className="text-3xl font-bold text-gray-900 mb-4 leading-tight">
+                      {t('whyDHJ.factors.integrated.title')}
+                    </h3>
+                    <p className="text-lg text-gray-700 leading-relaxed">
+                      {t('whyDHJ.factors.integrated.description')}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Factor 2: Digital - Purple */}
+              <div className="flex gap-8 group">
+                <div className="flex flex-col items-center">
+                  <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center shadow-xl z-10 group-hover:scale-125 transition-all duration-500">
+                    <Zap className="w-10 h-10 text-white" />
+                  </div>
+                  <div className="w-1 flex-1 bg-gradient-to-b from-purple-500 to-purple-300 min-h-24"></div>
+                </div>
+                <div className="flex-1 pb-16">
+                  <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 group-hover:-translate-x-2">
+                    <div className="flex items-center gap-4 mb-4">
+                      <span className="text-6xl font-black bg-gradient-to-br from-purple-500 to-purple-600 bg-clip-text text-transparent">
+                        02
+                      </span>
+                      <div className="flex-1">
+                        <p className="text-sm font-bold text-purple-600">
+                          {t('whyDHJ.factors.digital.detail')}
+                        </p>
+                      </div>
+                    </div>
+                    <h3 className="text-3xl font-bold text-gray-900 mb-4 leading-tight">
+                      {t('whyDHJ.factors.digital.title')}
+                    </h3>
+                    <p className="text-lg text-gray-700 leading-relaxed">
+                      {t('whyDHJ.factors.digital.description')}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Factor 3: Network - Blue */}
+              <div className="flex gap-8 group">
+                <div className="flex flex-col items-center">
+                  <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-xl z-10 group-hover:scale-125 transition-all duration-500">
+                    <Globe className="w-10 h-10 text-white" />
+                  </div>
+                  <div className="w-1 flex-1 bg-gradient-to-b from-blue-500 to-blue-300 min-h-24"></div>
+                </div>
+                <div className="flex-1 pb-16">
+                  <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 group-hover:-translate-x-2">
+                    <div className="flex items-center gap-4 mb-4">
+                      <span className="text-6xl font-black bg-gradient-to-br from-blue-500 to-blue-600 bg-clip-text text-transparent">
+                        03
+                      </span>
+                      <div className="flex-1">
+                        <p className="text-sm font-bold text-blue-600">
+                          {t('whyDHJ.factors.network.detail')}
+                        </p>
+                      </div>
+                    </div>
+                    <h3 className="text-3xl font-bold text-gray-900 mb-4 leading-tight">
+                      {t('whyDHJ.factors.network.title')}
+                    </h3>
+                    <p className="text-lg text-gray-700 leading-relaxed">
+                      {t('whyDHJ.factors.network.description')}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Factor 4: Execution - Green (No line) */}
+              <div className="flex gap-8 group">
+                <div className="flex flex-col items-center">
+                  <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-xl z-10 group-hover:scale-125 transition-all duration-500">
+                    <CheckCircle className="w-10 h-10 text-white" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 group-hover:-translate-x-2">
+                    <div className="flex items-center gap-4 mb-4">
+                      <span className="text-6xl font-black bg-gradient-to-br from-green-500 to-green-600 bg-clip-text text-transparent">
+                        04
+                      </span>
+                      <div className="flex-1">
+                        <p className="text-sm font-bold text-green-600">
+                          {t('whyDHJ.factors.execution.detail')}
+                        </p>
+                      </div>
+                    </div>
+                    <h3 className="text-3xl font-bold text-gray-900 mb-4 leading-tight">
+                      {t('whyDHJ.factors.execution.title')}
+                    </h3>
+                    <p className="text-lg text-gray-700 leading-relaxed">
+                      {t('whyDHJ.factors.execution.description')}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
