@@ -1262,25 +1262,8 @@ function App() {
         </div>
       </section>
 
-      {/* Strengths Section */}
+      {/* Why DHJ Section */}
       <section
-        id="strengths"
-        data-animate
-        className={`py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white transition-all duration-1000 ${
-          visibleSections.has('strengths')
-            ? 'opacity-100 translate-y-0'
-            : 'opacity-0 translate-y-20'
-        }`}
-      >
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-normal mb-8 tracking-tight">
-              {t('strengths.title')}
-            </h2>
-            <div className="w-24 h-px bg-rose-600 mx-auto mb-12"></div>
-            <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-medium">
-              {t('strengths.subtitle')}
-
         id="why-dhj"
         data-animate
         className={`py-24 md:py-32 bg-white relative overflow-hidden transition-all duration-1000 ${
@@ -1493,6 +1476,15 @@ function App() {
         </div>
       </section>
 
+      {/* News Section */}
+      <section
+        id="news"
+        data-animate
+        className={`py-32 bg-white transition-all duration-1000 ${
+          visibleSections.has('news')
+            ? 'opacity-100 translate-y-0'
+            : 'opacity-0 translate-y-20'
+        }`}
       >
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-20">
