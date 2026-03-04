@@ -1115,6 +1115,7 @@ function App() {
                 </div>
               </div>
             </div>
+          )}
 
           {/* Pattern B: 縦長カード＋横アイコン */}
           {whyDHJPattern === 'B' && (
