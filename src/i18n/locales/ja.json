@@ -4,18 +4,80 @@
     "scroll": "SCROLL"
   },
   "nav": {
-    "philosophy": "Philosophy",
-    "services": "Services",
-    "about": "About",
-    "strength": "Strength",
-    "executives": "Executives",
-    "contact": "お問い合わせ"
+    "home": "Home",
+    "aboutDHJ": "About DHJ",
+    "solutions": "Solutions",
+    "results": "Results",
+    "team": "Team",
+    "news": "News",
+    "contact": "お問い合わせ",
+    "solutionsDropdown": {
+      "integrated": "統合ソリューション",
+      "forBusiness": "自治体・企業の方へ",
+      "forPartners": "海外パートナーの方へ",
+      "forTravelers": "個人旅行の方へ"
+    }
   },
   "hero": {
-    "title": "本物の日本と<0/>世界をつなぎ、<0/><1>心に残る旅を創る</1>",
-    "subtitle": "地域の物語を紡ぎ、観光の未来に<0/>新たな価値を提案します",
-    "serviceDetails": "サービス詳細",
-    "contact": "お問い合わせ"
+    "title": "日本の隠れた価値を、世界へ。",
+    "subtitle": "新たな観光を、共に創る。",
+    "description": "海外の目と日本の心で、まだ知られていない価値を見つけ、<0/>世界に届け、地域に還す。<0/>発見から販売まで、観光の課題を一気通貫で解決します。",
+    "cta": {
+      "solutions": "事業内容を見る",
+      "contact": "お問い合わせ"
+    }
+  },
+  "solutions": {
+    "title": "DHJの統合ソリューション",
+    "subtitle": "観光の課題を、「点」ではなく「線」で解く。",
+    "phase1": {
+      "title": "価値の発見・再定義",
+      "description": "戦略コンサルティング / 伊豆半島・島根県での実践知見"
+    },
+    "phase2": {
+      "title": "デジタル化・可視化",
+      "description": "観光DX促進・AI活用 / データの力で、魅力を「届く形」に翻訳",
+      "note": "※Meta・Google出身者が世界基準のアルゴリズムで実装"
+    },
+    "phase3": {
+      "title": "体験の受け皿構築",
+      "description": "ツアー造成・民泊運営・AI通訳対応 / 「英語が不安」も技術とサポートで解決"
+    },
+    "phase4": {
+      "title": "世界への販売",
+      "description": "OTA運営・海外展示会出展",
+      "note": "※Facebook・Instagram・Google検索の内部ロジックを理解した戦略"
+    },
+    "phase5": {
+      "title": "利益還元・再投資",
+      "description": "継続的パートナーシップ / 地域と共に成長する持続可能なモデル"
+    },
+    "valueCircle": {
+      "title": "DHJが実現する価値循環（イメージ）",
+      "intro": "ある地域の伝統工芸を例に、私たちはこのような循環を創り上げます：",
+      "step1": "発見：職人技術を、現代的価値として再評価",
+      "step2": "可視化：AIで多言語ストーリー化、SNSで世界に発信",
+      "step3": "体験化：古民家を改装し、職人工房と一体化した滞在施設へ",
+      "step4": "販売：海外富裕層向け「職人と対話する3日間」として提供",
+      "step5": "還元：収益の一部で後継者育成プログラムを支援",
+      "conclusion": "地域経済の持続可能な循環が完成"
+    }
+  },
+  "whyDHJ": {
+    "title": "なぜDHJにできるのか",
+    "subtitle": "理論だけでなく、実行力で証明します",
+    "reason1": {
+      "title": "世界基準のデジタル実行力",
+      "description": "Meta（Facebook・Instagram）・Google（検索・Map）出身メンバーが、プラットフォームの内部ロジックを理解した戦略設計を実現。「なんとなくSNS」から「データ駆動のROI最大化」へ。"
+    },
+    "reason2": {
+      "title": "地域との協働実績",
+      "description": "伊豆半島・島根県での継続パートナーシップ。理論だけでなく、現場で動ける実行力を証明済み。"
+    },
+    "reason3": {
+      "title": "24時間グローバル体制",
+      "description": "フィリピン拠点による世界市場オペレーション。海外富裕層への直接販路を保有。"
+    }
   },
   "philosophy": {
     "title": "Our Philosophy",
@@ -42,78 +104,28 @@
       "description": "グローバルネットワーク"
     }
   },
-  "services": {
-    "title": "主要サービス",
-    "subtitle": "5つの専門領域で、日本の観光業界に革新をもたらします",
-    "inboundTour": {
-      "title": "インバウンドツアー企画・造成",
-      "subtitle": "都市部から郊外へと人の流れを生み出すツアーを企画・造成",
-      "description": "富裕層を対象としたハイエンド向けのカスタムインバウンドツアー。質の高い体験と地域経済の活性化を同時に実現します。",
-      "features": ["富裕層向けカスタムツアー", "地域経済活性化", "質の高い体験提供"]
-    },
-    "consulting": {
-      "title": "地方自治体向けコンサルティング",
-      "subtitle": "インバウンドを起点とした観光需要の創出・拡大を支援",
-      "description": "観光資源の棚卸しからプロモーション戦略の策定、受け入れ体制の整備に至るまで一貫したコンサルティングを提供します。",
-      "features": ["観光資源棚卸し", "プロモーション戦略", "受け入れ体制整備"]
-    },
-    "dxSolution": {
-      "title": "観光事業者向けDXソリューション",
-      "subtitle": "最新のデジタルツールやAI技術を活用した業務改善",
-      "description": "業務効率化、顧客体験の最適化、収益性の向上を実現。実行フェーズまで伴走する支援を提供します。",
-      "features": ["AI技術活用", "業務効率化", "収益性向上"]
-    },
-    "customTravel": {
-      "title": "カスタム手配旅行",
-      "subtitle": "訪日外国人および日本人旅行者を対象",
-      "description": "観光、視察、文化体験など幅広い目的に対応。個人旅行からグループ・企業向けのプライベートツアーまで、地域資源を活かした唯一無二の旅程を企画・造成します。",
-      "features": ["個人・グループ対応", "文化体験重視", "唯一無二の旅程"]
-    },
-    "vacationRental": {
-      "title": "空き家活用民泊運営",
-      "subtitle": "地方に点在する空き家を有効活用",
-      "description": "民泊としての新たな価値を創出する運営事業。空き家問題の解消と観光振興の両立を実現します。",
-      "features": ["空き家有効活用", "地域問題解決", "観光振興両立"]
-    }
-  },
-  "strengths": {
-    "title": "私たちの強み",
-    "subtitle": "多様な専門性と実績が生み出す、確かな価値",
-    "global": {
-      "title": "グローバルな視点",
-      "description": "外資系IT企業での豊富な経験を活かし、世界基準のサービスを提供"
-    },
-    "technology": {
-      "title": "最先端技術",
-      "description": "AI・DXを活用した業務効率化とデジタルマーケティング戦略"
-    },
-    "support": {
-      "title": "実践的支援",
-      "description": "戦略立案から実行まで、現場に寄り添った伴走型コンサルティング"
-    }
-  },
   "executives": {
     "title": "役員紹介",
-    "subtitle": "多様なバックグラウンドと専門性を持つプロフェッショナル",
+    "subtitle": "世界標準の知見と日本の現場力を融合",
     "shoKishiro": {
-      "background": "旅行代理店勤務した後、Booking.comやMetaをはじめ外資系IT企業にて長年勤務。インバウンド新規事業の戦略立案、自治体へのコンサルティングを得意とし、個人でのコンサルティング実績多数。",
-      "expertise": ["戦略立案", "インバウンド事業", "自治体コンサルティング"]
+      "background": "Meta（Facebook・Instagram広告）での実績を持ち、観光業界にデジタルマーケティングの世界基準を導入。",
+      "expertise": ["デジタルマーケティング戦略", "SNSアルゴリズム最適化", "ROI最大化"]
     },
     "yoshihiroFujimoto": {
-      "background": "大手製造業、大手コンサルティングファームやMicrosoft等での経験を経て参画。顧客管理ツールの販売や、ITソリューションの提案など、IT技術を駆使した業務効率化提案が可能。",
-      "expertise": ["ITソリューション", "業務効率化", "システム開発"]
+      "background": "Google出身。検索アルゴリズムとマップ最適化の知見で、観光地のオンライン可視性を向上。",
+      "expertise": ["SEO戦略", "Googleマイビジネス最適化", "データ分析"]
     },
     "takashiAoki": {
-      "background": "フィリピン・セブ在住。NGOでの国際協力やBPO業務の管理統括、飲食店経営や社会起業創設など、多岐に渡る経験から、既存概念に囚われない課題解決が可能。",
-      "expertise": ["国際協力", "BPO管理", "社会起業"]
+      "background": "JTB出身。旅行業界の実務経験と、大手ならではのオペレーション構築力を持つ。",
+      "expertise": ["ツアーオペレーション", "品質管理", "パートナーシップ構築"]
     },
     "junkoOkabe": {
-      "background": "30年以上に亘りJTBで勤め、フィリピンを始めとする、東南アジア地域やオーストラリアのツアー造成に深い経験を持つ。",
-      "expertise": ["ツアー造成", "東南アジア", "オーストラリア"]
+      "background": "地域密着型の観光プロデュースを得意とし、自治体との協働プロジェクトを多数実現。",
+      "expertise": ["地域コンサルティング", "自治体連携", "観光プロデュース"]
     },
     "ayanoFujimoto": {
-      "background": "18歳で単身アメリカNYへ。学位取得、旅行代理店勤務の後、帰国。Booking.comやGoogleなどを経て、2024年Microsoftへ転職。旅行業界とデジタルマーケティング分野を専門とし、幅広い業界の顧客との実績多数。",
-      "expertise": ["デジタルマーケティング", "旅行業界", "国際経験"]
+      "background": "Microsoft出身。テクノロジーと観光の融合で、業務効率化とゲスト体験向上を実現。",
+      "expertise": ["観光DX", "業務効率化", "システム導入支援"]
     }
   },
   "companyInfo": {
@@ -131,13 +143,27 @@
     "registration": "登録資格",
     "registrationValue": "東京都知事登録旅行業 第2 - 8865号",
     "membership": "加盟・認可団体",
-    "membershipValue": "一般社団法人 日本旅行業協会(JATA)"
+    "membershipValue": "一般社団法人 日本旅行業協会(JATA)",
+    "financial": "財務基盤",
+    "financialValue": "資本金: ¥9,200,000 / 確保済み資金総額: ¥25,000,000（日本政策金融公庫および金融機関からの支援）"
+  },
+  "news": {
+    "title": "お知らせ",
+    "subtitle": "最新のニュースとプレスリリース",
+    "readMore": "詳しく見る",
+    "items": {
+      "beautifulVillages": {
+        "date": "2026年4月",
+        "title": "「日本で最も美しい村」連合 加盟企業認定",
+        "description": "Discovery Hidden Japanは、「日本で最も美しい村」連合の加盟企業として認定されました。地域の美しさと文化を守りながら、持続可能な観光を推進してまいります。"
+      }
+    }
   },
   "contact": {
     "title": "お問い合わせ",
     "subtitle": "革新的なソリューションで、日本の観光業界の未来を共に創造します",
     "button": "お問い合わせフォーム",
-    "orEmail": "または直接メールでお問い合わせ"
+    "emailPrompt": "または直接メールでお問い合わせ"
   },
   "footer": {
     "tagline": "心と土地を結び、時を紡ぐ",
@@ -147,35 +173,33 @@
     "title": "お問い合わせ",
     "subtitle": "お気軽にご相談ください",
     "name": "お名前",
+    "namePlaceholder": "山田 太郎",
     "email": "メールアドレス",
+    "emailPlaceholder": "example@example.com",
     "company": "会社名・団体名",
+    "companyPlaceholder": "株式会社〇〇",
     "phone": "電話番号",
+    "phonePlaceholder": "090-1234-5678",
     "subject": "お問い合わせ種別",
-    "message": "メッセージ",
-    "required": "*",
-    "selectSubject": "選択してください",
-    "placeholder": {
-      "name": "山田太郎",
-      "email": "example@company.com",
-      "company": "株式会社サンプル",
-      "phone": "03-1234-5678",
-      "message": "お問い合わせ内容をご記入ください..."
-    },
-    "subjects": {
-      "inboundTour": "インバウンドツアー企画について",
-      "consulting": "自治体向けコンサルティングについて",
-      "dxSolution": "DXソリューションについて",
-      "customTravel": "カスタム手配旅行について",
-      "vacationRental": "民泊運営について",
-      "documentRequest": "資料請求",
+    "subjectPlaceholder": "選択してください",
+    "subjectOptions": {
+      "inbound": "インバウンドツアーについて",
+      "consulting": "自治体コンサルティングについて",
+      "dx": "観光DXソリューションについて",
+      "customTravel": "カスタム旅行手配について",
+      "property": "民泊・施設運営について",
+      "document": "資料請求",
       "other": "その他"
     },
+    "message": "お問い合わせ内容",
+    "messagePlaceholder": "お問い合わせ内容をご記入ください",
     "submit": "送信する",
     "submitting": "送信中...",
     "cancel": "キャンセル",
-    "success": "お問い合わせを送信しました。ありがとうございます。",
-    "error": "送信に失敗しました。もう一度お試しください。",
-    "footer": "フォームからのお問い合わせに返信がございません場合は、お手数ですが下記メールまでご連絡ください。<0/>24時間受付"
+    "success": "お問い合わせを受け付けました",
+    "successMessage": "担当者より24時間以内にご連絡いたします。",
+    "error": "送信に失敗しました",
+    "errorMessage": "時間をおいて再度お試しください。",
+    "footer": "通常24時間以内にご返信いたします。お急ぎの場合は、info@dh-japan.comまで直接ご連絡ください。"
   }
 }
-

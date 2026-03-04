@@ -4,18 +4,80 @@
     "scroll": "SCROLL"
   },
   "nav": {
-    "philosophy": "Philosophy",
-    "services": "Services",
-    "about": "About",
-    "strength": "Strength",
-    "executives": "Executives",
-    "contact": "Contact"
+    "home": "Home",
+    "aboutDHJ": "About DHJ",
+    "solutions": "Solutions",
+    "results": "Results",
+    "team": "Team",
+    "news": "News",
+    "contact": "Contact",
+    "solutionsDropdown": {
+      "integrated": "Integrated Solutions",
+      "forBusiness": "For Government & Business",
+      "forPartners": "For Overseas Partners",
+      "forTravelers": "For Travelers"
+    }
   },
   "hero": {
-    "title": "Connecting authentic Japan <0/>with the world,<0/> <1>creating unforgettable journeys</1>",
-    "subtitle": "We weave regional stories and propose<0/> new value for the future of tourism",
-    "serviceDetails": "Service Details",
-    "contact": "Contact"
+    "title": "Hidden Gems of Japan, to the World.",
+    "subtitle": "Creating New Tourism, Together.",
+    "description": "With global perspective and Japanese heart, we discover hidden values,<0/>connect them to the world, and return benefits to local communities.<0/>From discovery to sales, we solve tourism challenges end-to-end.",
+    "cta": {
+      "solutions": "Our Solutions",
+      "contact": "Contact Us"
+    }
+  },
+  "solutions": {
+    "title": "DHJ's Integrated Solutions",
+    "subtitle": "Solving tourism challenges not as 'dots' but as a 'line'.",
+    "phase1": {
+      "title": "Discovery & Redefinition",
+      "description": "Strategic Consulting / Proven track record in Izu & Shimane"
+    },
+    "phase2": {
+      "title": "Digitalization & Visualization",
+      "description": "Tourism DX & AI Solutions / Translating charm into 'deliverable forms' with data",
+      "note": "※Implemented by Meta/Google alumni with world-class algorithms"
+    },
+    "phase3": {
+      "title": "Experience Infrastructure",
+      "description": "Tour Planning & Property Management / Solving language barriers with AI"
+    },
+    "phase4": {
+      "title": "Global Sales",
+      "description": "OTA Management & International Trade Shows",
+      "note": "※Strategy based on deep understanding of Facebook/Instagram/Google algorithms"
+    },
+    "phase5": {
+      "title": "Profit Return & Reinvestment",
+      "description": "Continuous Partnership / Sustainable growth model with communities"
+    },
+    "valueCircle": {
+      "title": "Value Circulation Model (Example)",
+      "intro": "Taking traditional crafts as an example, we create this circulation:",
+      "step1": "Discovery: Reevaluate craftsmanship as contemporary value",
+      "step2": "Visualization: Multilingual storytelling with AI, global reach via SNS",
+      "step3": "Experience: Renovate old houses into stays integrated with craft workshops",
+      "step4": "Sales: Offer '3-day dialogue with craftsmen' to affluent travelers",
+      "step5": "Return: Support successor training programs with part of revenue",
+      "conclusion": "Sustainable circulation for regional economy achieved"
+    }
+  },
+  "whyDHJ": {
+    "title": "Why DHJ Can Deliver",
+    "subtitle": "Proven not just in theory, but in execution",
+    "reason1": {
+      "title": "World-Class Digital Execution",
+      "description": "Team members from Meta (Facebook/Instagram) and Google (Search/Maps) implement strategies based on deep platform algorithm understanding. From 'casual SNS' to 'data-driven ROI maximization'."
+    },
+    "reason2": {
+      "title": "Regional Partnership Track Record",
+      "description": "Ongoing partnerships in Izu Peninsula and Shimane Prefecture. Proven execution capability on the ground, not just theory."
+    },
+    "reason3": {
+      "title": "24/7 Global Operations",
+      "description": "Philippines-based global market operations. Direct sales channels to affluent overseas travelers."
+    }
   },
   "philosophy": {
     "title": "Our Philosophy",
@@ -42,78 +104,28 @@
       "description": "Global network"
     }
   },
-  "services": {
-    "title": "Main Services",
-    "subtitle": "Bringing innovation to Japan's tourism industry through five specialized areas",
-    "inboundTour": {
-      "title": "Inbound Tour Planning & Development",
-      "subtitle": "Planning and developing tours that channel tourism from urban to rural areas",
-      "description": "High-end custom inbound tours for affluent travelers. We deliver exceptional experiences while simultaneously revitalizing regional economies.",
-      "features": ["Custom tours for affluent travelers", "Regional economic revitalization", "High-quality experience provision"]
-    },
-    "consulting": {
-      "title": "Local Government Consulting",
-      "subtitle": "Supporting the creation and expansion of tourism demand starting from inbound tourism",
-      "description": "We provide comprehensive consulting, from conducting tourism resource inventories to developing promotion strategies and building tourism readiness.",
-      "features": ["Tourism resource inventory", "Promotion strategy", "Building tourism readiness"]
-    },
-    "dxSolution": {
-      "title": "DX Solutions for Tourism Businesses",
-      "subtitle": "Business transformation using cutting-edge digital tools and AI technology",
-      "description": "We enhance operational efficiency, optimize customer experience, and improve profitability. We provide support throughout the entire execution phase.",
-      "features": ["AI technology utilization", "Operational efficiency", "Profitability improvement"]
-    },
-    "customTravel": {
-      "title": "Custom Travel Arrangements",
-      "subtitle": "For inbound foreign visitors and Japanese travelers",
-      "description": "We accommodate a wide range of purposes including tourism, inspections, and cultural experiences. From individual trips to group and corporate private tours, we plan and develop unique itineraries that leverage regional resources.",
-      "features": ["Individual & group support", "Cultural experience focus", "Unique itineraries"]
-    },
-    "vacationRental": {
-      "title": "Vacation Rental Operations Leveraging Vacant Properties",
-      "subtitle": "Effectively utilizing scattered vacant properties in rural areas",
-      "description": "A management business that creates new value as vacation rentals. We address both the vacancy issue and tourism promotion simultaneously.",
-      "features": ["Effective use of vacant properties", "Solving regional problems", "Balancing tourism promotion"]
-    }
-  },
-  "strengths": {
-    "title": "Our Strengths",
-    "subtitle": "Reliable value created by diverse expertise and achievements",
-    "global": {
-      "title": "Global Perspective",
-      "description": "Leveraging rich experience at foreign-affiliated IT companies to provide world-class services"
-    },
-    "technology": {
-      "title": "Cutting-edge Technology",
-      "description": "Operational efficiency and digital marketing strategies utilizing AI and DX"
-    },
-    "support": {
-      "title": "Practical Support",
-      "description": "Hands-on consulting that accompanies from strategy formulation to execution"
-    }
-  },
   "executives": {
     "title": "Executive Team",
-    "subtitle": "Experts with diverse backgrounds gathered together",
+    "subtitle": "Fusing Global Expertise with Local Execution",
     "shoKishiro": {
-      "background": "After working at a travel agency, he worked for many years at foreign IT companies including Booking.com and Meta. He specializes in strategic planning for new inbound businesses and consulting for local governments, with numerous individual consulting achievements.",
-      "expertise": ["Strategic Planning", "Inbound Business", "Local Government Consulting"]
+      "background": "Track record at Meta (Facebook/Instagram Ads), introducing world-class digital marketing standards to the tourism industry.",
+      "expertise": ["Digital Marketing Strategy", "SNS Algorithm Optimization", "ROI Maximization"]
     },
     "yoshihiroFujimoto": {
-      "background": "Joined after experience at major manufacturers, major consulting firms, and Microsoft. Capable of proposing operational efficiency improvements using IT technology, such as sales of customer management tools and proposals for IT solutions.",
-      "expertise": ["IT Solutions", "Operational Efficiency", "System Development"]
+      "background": "Google alumni. Expertise in search algorithms and Maps optimization to improve online visibility of tourist destinations.",
+      "expertise": ["SEO Strategy", "Google My Business Optimization", "Data Analysis"]
     },
     "takashiAoki": {
-      "background": "Resides in Cebu, Philippines. With diverse experience including international cooperation in NGOs, management of BPO operations, restaurant management, and social entrepreneurship, he can solve problems without being bound by existing concepts.",
-      "expertise": ["International Cooperation", "BPO Management", "Social Entrepreneurship"]
+      "background": "From JTB. Practical travel industry experience and large-scale operational construction capability.",
+      "expertise": ["Tour Operations", "Quality Management", "Partnership Building"]
     },
     "junkoOkabe": {
-      "background": "Worked at JTB for over 30 years, with deep experience in tour development for Southeast Asia and Australia, including the Philippines.",
-      "expertise": ["Tour Development", "Southeast Asia", "Australia"]
+      "background": "Specializes in community-based tourism production, realizing numerous collaborative projects with local governments.",
+      "expertise": ["Regional Consulting", "Municipal Partnerships", "Tourism Production"]
     },
     "ayanoFujimoto": {
-      "background": "Moved to NY, USA alone at 18. After obtaining a degree and working at a travel agency, she returned to Japan. After working at Booking.com and Google, she moved to Microsoft in 2024. Specializes in the travel industry and digital marketing, with numerous achievements with clients in various industries.",
-      "expertise": ["Digital Marketing", "Travel Industry", "International Experience"]
+      "background": "Microsoft alumni. Merging technology and tourism to achieve operational efficiency and enhanced guest experiences.",
+      "expertise": ["Tourism DX", "Operational Efficiency", "System Implementation"]
     }
   },
   "companyInfo": {
@@ -131,51 +143,63 @@
     "registration": "Registration",
     "registrationValue": "Travel Agency registered with Tokyo Metropolitan Government, Registration No. 2-8865",
     "membership": "Membership & Certification",
-    "membershipValue": "Full Member of Japan Association of Travel Agents (JATA)"
+    "membershipValue": "Full Member of Japan Association of Travel Agents (JATA)",
+    "financial": "Financial Foundation",
+    "financialValue": "Capital: ¥9,200,000 / Total Funding Secured: ¥25,000,000 (Backed by JFC & Financial Institutions)"
+  },
+  "news": {
+    "title": "News & Announcements",
+    "subtitle": "Latest news and press releases",
+    "readMore": "Read More",
+    "items": {
+      "beautifulVillages": {
+        "date": "April 2026",
+        "title": "Certified Member of 'The Most Beautiful Villages in Japan' Association",
+        "description": "Discovery Hidden Japan has been certified as a member company of 'The Most Beautiful Villages in Japan' Association. We will continue to promote sustainable tourism while preserving the beauty and culture of local regions."
+      }
+    }
   },
   "contact": {
     "title": "Contact Us",
     "subtitle": "Together, we create the future of Japan's tourism industry with innovative solutions",
     "button": "Contact Form",
-    "orEmail": "Or contact us directly by email"
+    "emailPrompt": "Or contact us directly via email"
   },
   "footer": {
     "tagline": "Connecting hearts and land, weaving stories through time",
     "copyright": "© 2025 Discovery Hidden Japan. All rights reserved."
   },
   "contactForm": {
-    "title": "Contact",
-    "subtitle": "Please feel free to contact us",
+    "title": "Contact Us",
+    "subtitle": "Feel free to reach out",
     "name": "Name",
-    "email": "Email Address",
+    "namePlaceholder": "John Doe",
+    "email": "Email",
+    "emailPlaceholder": "example@example.com",
     "company": "Company / Organization",
-    "phone": "Phone Number",
+    "companyPlaceholder": "ABC Company",
+    "phone": "Phone",
+    "phonePlaceholder": "+81-90-1234-5678",
     "subject": "Inquiry Type",
-    "message": "Message",
-    "required": "*",
-    "selectSubject": "Please select",
-    "placeholder": {
-      "name": "John Doe",
-      "email": "example@company.com",
-      "company": "Company Inc.",
-      "phone": "123-456-7890",
-      "message": "Please enter your inquiry..."
-    },
-    "subjects": {
-      "inboundTour": "Inbound Tour Planning",
-      "consulting": "Local Government Consulting",
-      "dxSolution": "DX Solutions",
+    "subjectPlaceholder": "Please select",
+    "subjectOptions": {
+      "inbound": "Inbound Tours",
+      "consulting": "Regional Consulting",
+      "dx": "Tourism DX Solutions",
       "customTravel": "Custom Travel Arrangements",
-      "vacationRental": "Vacation Rental Operations",
-      "documentRequest": "Document Request",
+      "property": "Property Management",
+      "document": "Document Request",
       "other": "Other"
     },
-    "submit": "Send",
+    "message": "Message",
+    "messagePlaceholder": "Please describe your inquiry",
+    "submit": "Submit",
     "submitting": "Sending...",
     "cancel": "Cancel",
-    "success": "Your inquiry has been sent. Thank you.",
-    "error": "Failed to send. Please try again.",
-    "footer": "If you do not receive a reply to your inquiry from the form, please contact us at the email below.<0/>24/7 Support"
+    "success": "Message sent successfully",
+    "successMessage": "We will respond within 24 hours.",
+    "error": "Failed to send",
+    "errorMessage": "Please try again later.",
+    "footer": "We typically respond within 24 hours. For urgent inquiries, please email info@dh-japan.com directly."
   }
 }
-

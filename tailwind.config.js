@@ -28,6 +28,13 @@ export default {
       },
       animation: {
         'zoom-in': 'zoom-in 5s ease-out forwards',
+        'spin-slow': 'spin 8s linear infinite',
+      },
+      keyframes: {
+        'zoom-in': {
+          '0%': { transform: 'scale(1)' },
+          '100%': { transform: 'scale(1.1)' }
+        }
       }
     },
   },
