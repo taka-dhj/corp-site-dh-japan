@@ -815,7 +815,7 @@ function App() {
             : 'opacity-0 translate-y-20'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="w-full px-8 md:px-12">
           {/* Section Header */}
           <div className="text-center mb-20">
             <p className="text-2xl md:text-3xl text-gray-300 font-light">
@@ -823,10 +823,10 @@ function App() {
             </p>
           </div>
 
-          {/* Desktop: 5 cards in one row - all visible */}
-          <div className="hidden lg:grid lg:grid-cols-5 gap-6 mb-12">
+          {/* Desktop: 5 cards in one row - all visible - FULL WIDTH */}
+          <div className="hidden lg:grid lg:grid-cols-5 gap-4 mb-12">
             {/* Phase 1 */}
-            <div className="group relative h-[500px] rounded-2xl overflow-hidden">
+            <div className="group relative h-[600px] rounded-2xl overflow-hidden">
               <img 
                 src="https://images.pexels.com/photos/2614818/pexels-photo-2614818.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop" 
                 alt="Discovery Phase"
@@ -834,19 +834,23 @@ function App() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                <div className="flex items-center justify-between mb-5">
-                  <div className="w-14 h-14 bg-gradient-to-br from-rose-500 to-rose-600 rounded-xl flex items-center justify-center shadow-2xl">
-                    <Search className="w-7 h-7 text-white" />
-                  </div>
-                  <span className="text-5xl font-light text-rose-400">01</span>
+                {/* Number - Fixed height container */}
+                <div className="h-16 flex items-center justify-center mb-6">
+                  <span className="text-6xl font-light text-rose-400">01</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 leading-snug">{t('solutions.phases.discovery.title')}</h3>
-                <p className="text-base text-white/90 mb-3 leading-relaxed">{t('solutions.phases.discovery.description')}</p>
+                {/* Title - Fixed height container */}
+                <div className="h-20 flex items-start mb-4">
+                  <h3 className="text-3xl font-bold leading-tight">{t('solutions.phases.discovery.title')}</h3>
+                </div>
+                {/* Description - Fixed height container */}
+                <div className="h-16 flex items-start">
+                  <p className="text-lg text-white/90 leading-relaxed">{t('solutions.phases.discovery.description')}</p>
+                </div>
               </div>
             </div>
 
             {/* Phase 2 */}
-            <div className="group relative h-[500px] rounded-2xl overflow-hidden">
+            <div className="group relative h-[600px] rounded-2xl overflow-hidden">
               <img 
                 src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop" 
                 alt="Digitalization Phase"
@@ -854,20 +858,23 @@ function App() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                <div className="flex items-center justify-between mb-5">
-                  <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center shadow-2xl">
-                    <Cpu className="w-7 h-7 text-white" />
-                  </div>
-                  <span className="text-5xl font-light text-purple-400">02</span>
+                {/* Number - Fixed height container */}
+                <div className="h-16 flex items-center justify-center mb-6">
+                  <span className="text-6xl font-light text-purple-400">02</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 leading-snug">{t('solutions.phases.digitalization.title')}</h3>
-                <p className="text-base text-white/90 mb-3 leading-relaxed">{t('solutions.phases.digitalization.description')}</p>
-                
+                {/* Title - Fixed height container */}
+                <div className="h-20 flex items-start mb-4">
+                  <h3 className="text-3xl font-bold leading-tight">{t('solutions.phases.digitalization.title')}</h3>
+                </div>
+                {/* Description - Fixed height container */}
+                <div className="h-16 flex items-start">
+                  <p className="text-lg text-white/90 leading-relaxed">{t('solutions.phases.digitalization.description')}</p>
+                </div>
               </div>
             </div>
 
             {/* Phase 3 */}
-            <div className="group relative h-[500px] rounded-2xl overflow-hidden">
+            <div className="group relative h-[600px] rounded-2xl overflow-hidden">
               <img 
                 src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop" 
                 alt="Infrastructure Phase"
@@ -875,20 +882,23 @@ function App() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                <div className="flex items-center justify-between mb-5">
-                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-2xl">
-                    <Building2 className="w-7 h-7 text-white" />
-                  </div>
-                  <span className="text-5xl font-light text-blue-400">03</span>
+                {/* Number - Fixed height container */}
+                <div className="h-16 flex items-center justify-center mb-6">
+                  <span className="text-6xl font-light text-blue-400">03</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 leading-snug">{t('solutions.phases.infrastructure.title')}</h3>
-                <p className="text-base text-white/90 mb-3 leading-relaxed">{t('solutions.phases.infrastructure.description')}</p>
-                
+                {/* Title - Fixed height container */}
+                <div className="h-20 flex items-start mb-4">
+                  <h3 className="text-3xl font-bold leading-tight">{t('solutions.phases.infrastructure.title')}</h3>
+                </div>
+                {/* Description - Fixed height container */}
+                <div className="h-16 flex items-start">
+                  <p className="text-lg text-white/90 leading-relaxed">{t('solutions.phases.infrastructure.description')}</p>
+                </div>
               </div>
             </div>
 
             {/* Phase 4 */}
-            <div className="group relative h-[500px] rounded-2xl overflow-hidden">
+            <div className="group relative h-[600px] rounded-2xl overflow-hidden">
               <img 
                 src="https://images.pexels.com/photos/1320684/pexels-photo-1320684.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop" 
                 alt="Sales Phase"
@@ -896,20 +906,23 @@ function App() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                <div className="flex items-center justify-between mb-5">
-                  <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center shadow-2xl">
-                    <Send className="w-7 h-7 text-white" />
-                  </div>
-                  <span className="text-5xl font-light text-amber-400">04</span>
+                {/* Number - Fixed height container */}
+                <div className="h-16 flex items-center justify-center mb-6">
+                  <span className="text-6xl font-light text-amber-400">04</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 leading-snug">{t('solutions.phases.sales.title')}</h3>
-                <p className="text-base text-white/90 mb-3 leading-relaxed">{t('solutions.phases.sales.description')}</p>
-                
+                {/* Title - Fixed height container */}
+                <div className="h-20 flex items-start mb-4">
+                  <h3 className="text-3xl font-bold leading-tight">{t('solutions.phases.sales.title')}</h3>
+                </div>
+                {/* Description - Fixed height container */}
+                <div className="h-16 flex items-start">
+                  <p className="text-lg text-white/90 leading-relaxed">{t('solutions.phases.sales.description')}</p>
+                </div>
               </div>
             </div>
 
             {/* Phase 5 */}
-            <div className="group relative h-[500px] rounded-2xl overflow-hidden">
+            <div className="group relative h-[600px] rounded-2xl overflow-hidden">
               <img 
                 src="https://images.pexels.com/photos/46253/mt-fuji-sea-of-clouds-sunrise-46253.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop" 
                 alt="Reinvestment Phase"
@@ -917,15 +930,18 @@ function App() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                <div className="flex items-center justify-between mb-5">
-                  <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center shadow-2xl">
-                    <RefreshCw className="w-7 h-7 text-white" />
-                  </div>
-                  <span className="text-5xl font-light text-green-400">05</span>
+                {/* Number - Fixed height container */}
+                <div className="h-16 flex items-center justify-center mb-6">
+                  <span className="text-6xl font-light text-green-400">05</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 leading-snug">{t('solutions.phases.reinvestment.title')}</h3>
-                <p className="text-base text-white/90 mb-3 leading-relaxed">{t('solutions.phases.reinvestment.description')}</p>
-                
+                {/* Title - Fixed height container */}
+                <div className="h-20 flex items-start mb-4">
+                  <h3 className="text-3xl font-bold leading-tight">{t('solutions.phases.reinvestment.title')}</h3>
+                </div>
+                {/* Description - Fixed height container */}
+                <div className="h-16 flex items-start">
+                  <p className="text-lg text-white/90 leading-relaxed">{t('solutions.phases.reinvestment.description')}</p>
+                </div>
               </div>
             </div>
           </div>
