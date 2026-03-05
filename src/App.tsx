@@ -1231,26 +1231,26 @@ function App() {
 
                     {/* DHJ Privé CTA for Custom Travel Service */}
                     {index === 3 && (
-                      <div className="mt-8 p-8 bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-xl border-2 border-rose-500 shadow-2xl relative overflow-hidden">
+                      <div className="mt-6 p-6 bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-lg border border-rose-500/50 relative overflow-hidden">
                         {/* Background Pattern */}
-                        <div className="absolute inset-0 opacity-10">
+                        <div className="absolute inset-0 opacity-5">
                           <div className="absolute inset-0" style={{
                             backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-                            backgroundSize: '32px 32px'
+                            backgroundSize: '24px 24px'
                           }}></div>
                         </div>
                         
                         <div className="relative z-10">
-                          <div className="flex items-center gap-3 mb-5">
-                            <div className="p-2 bg-rose-600 rounded-lg">
-                              <Crown className="w-6 h-6 text-white" />
+                          <div className="flex items-center gap-2 mb-3">
+                            <div className="p-1.5 bg-rose-600 rounded">
+                              <Crown className="w-4 h-4 text-white" />
                             </div>
-                            <span className="text-rose-400 text-sm font-bold uppercase tracking-wider">Premium Experience</span>
+                            <span className="text-rose-400 text-xs font-semibold uppercase tracking-wider">Premium Experience</span>
                           </div>
-                          <h4 className="text-3xl font-light text-white mb-3">
+                          <h4 className="text-xl font-light text-white mb-2">
                             DHJ Privé
                           </h4>
-                          <p className="text-gray-200 mb-6 leading-relaxed text-lg">
+                          <p className="text-gray-300 mb-4 leading-relaxed text-sm">
                             {i18n.language === 'ja' 
                               ? '富裕層向けのプレミアムツアーはDHJ Privéで。一流の体験と最高のおもてなしをご提供します。'
                               : 'Premium tours for discerning travelers. Experience world-class service and exclusive journeys.'}
@@ -1259,13 +1259,13 @@ function App() {
                             href="https://prive.dh-japan.com/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-3 bg-gradient-to-r from-rose-600 to-rose-700 hover:from-rose-700 hover:to-rose-800 text-white px-8 py-4 rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl group text-lg font-medium"
+                            className="inline-flex items-center gap-2 bg-gradient-to-r from-rose-600 to-rose-700 hover:from-rose-700 hover:to-rose-800 text-white px-5 py-2.5 rounded-lg transition-all duration-300 transform hover:-translate-y-0.5 group text-sm font-medium"
                           >
-                            <Crown className="w-5 h-5" />
+                            <Crown className="w-4 h-4" />
                             <span>
                               {i18n.language === 'ja' ? 'DHJ Privéへ' : 'Visit DHJ Privé'}
                             </span>
-                            <ExternalLink className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                            <ExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                           </a>
                         </div>
                       </div>
