@@ -1494,6 +1494,78 @@ function App() {
         </div>
       </section>
 
+      {/* Executives Section */}
+      <section
+        id="executives"
+        className="py-32 bg-white"
+      >
+        <div className="max-w-7xl mx-auto px-4">
+          <div
+            id="executives-header"
+            data-animate
+            className={`text-center mb-20 transition-all duration-1000 ${
+              visibleSections.has('executives-header')
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 translate-y-20'
+            }`}
+          >
+            <h2 className="text-5xl md:text-6xl font-normal text-gray-900 mb-8 tracking-tight">
+              {t('executives.title')}
+            </h2>
+            <div className="w-24 h-px bg-rose-600 mx-auto mb-12"></div>
+            <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-medium">
+              {t('executives.subtitle')}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {executives.map((executive, index) => (
+              <div
+                key={index}
+                data-animate
+                className={`bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg overflow-hidden shadow-xl transition-all duration-1000 delay-${index * 100} hover:transform hover:-translate-y-2 ${
+                  visibleSections.has('executives-header')
+                    ? 'opacity-100 translate-y-0'
+                    : 'opacity-0 translate-y-20'
+                }`}
+              >
+                <div className="relative h-80 overflow-hidden">
+                  <img
+                    src={executive.image}
+                    alt={executive.name}
+                    className="w-full h-full object-cover"
+                    style={
+                      executive.name === '希代 翔' || executive.name === 'Sho Kitai'
+                        ? { objectPosition: 'center 35%' }
+                        : executive.name === '藤本 芳浩' || executive.name === 'Yoshihiro Fujimoto'
+                        ? { objectPosition: 'center 40%' }
+                        : {}
+                    }
+                  />
+                </div>
+
+                <div className="p-8">
+                  <h3 className="text-2xl font-light text-white mb-2">{executive.name}</h3>
+                  <p className="text-rose-600 font-medium text-lg mb-5">{executive.position}</p>
+
+                  <p className="text-gray-300 leading-relaxed font-normal mb-6 text-lg">
+                    {executive.background}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2">
+                    {executive.expertise.map((skill, skillIndex) => (
+                      <span key={skillIndex} className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full font-normal">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* News Section */}
       <section
         id="news"
